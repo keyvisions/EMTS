@@ -6,7 +6,7 @@ $$
 z = r(\cos\theta + i\sin\theta)
 $$
 
-Here, $r$ is the modulus (magnitude) and $\theta$ is the argument (phase angle). To connect this mathematical structure to physical reality, we can assign physical meaning to $r$ and $\theta$.
+$r$ is the modulus (magnitude) and $\theta$ is the argument (phase angle). To connect this mathematical structure to physical reality, we can assign physical meaning to $r$ and $\theta$.
 
 ### Physical Interpretation of $r$ and $\theta$
 
@@ -62,6 +62,9 @@ By leveraging these physical constants:
 - The **speed of light $c$** bridges mass, energy, and space.
 - **Planck's constant $h$** (or $\hbar$) connects energy, frequency, and time.
 
-This approach allows us to reinterpret the modulus $r$ as a spatial quantity (meters) and the argument $\theta$ as a temporal quantity (seconds), embedding the fundamental constants of nature directly into our complex plane framework. In this way, the complex number $z$ becomes a unified representation of mass, energy, space, and time, with the constants $c$ and $h$ providing the necessary conversion factors between physical units.
+This approach allows us to reinterpret the modulus $r$ as a spatial quantity (meters) and the argument $\theta$ as a temporal quantity (seconds), embedding the fundamental constants of nature directly into our complex plane framework. In this way, the complex number $z$ becomes a unified representation of energy, mass, space, and time, with the constants $c$ and $h$ providing the necessary conversion factors between physical units.
 
 The projection of $z$ on the real axis $m_z$ as a function of $\theta$, i.e., $r = m_z / cos(\theta)$, tells us that at different moments in time $m_z$ appears the same to us yet its $E_z$ changes.
+
+<a href="./CHAPTER1.md" style="float:left">&lt;&lt; Chapter 1: The Complex Plane: A Perspective</a>
+<a href="./CHAPTER3.md" style="float:right">Chapter 3: The Quadrants of the Complex Plane &gt;&gt;</a>

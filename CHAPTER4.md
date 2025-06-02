@@ -1,4 +1,4 @@
-# Chapter 4: Reality as a Mapping
+# Chapter 4: Mapping Reality
 
 As we consider the implications of this mapping, we begin to see that our perception of reality may be a projection of the complex number $z$ onto the real axis. This projection serves as a crucial bridge between the abstract mathematical constructs of the complex plane and the tangible physical phenomena we experience in our daily lives. By viewing reality through this lens, we can interpret the myriad interactions and behaviors of particles as reflections of the underlying mathematical relationships that govern them.
 
@@ -7,3 +7,6 @@ The intricate dance of particles, for instance, can be understood as a manifesta
 Moreover, the very fabric of spacetime itself can be viewed as a geometric representation of these mathematical relationships. In this framework, spacetime is not merely a backdrop for physical events but an active participant in the dynamics of the universe. The curvature of spacetime, as described by general relativity, can be interpreted as a consequence of the interactions between mass and energy, which are mapped onto the complex plane.
 
 This perspective invites us to reconsider the nature of reality itself. Rather than viewing it as a collection of isolated events and entities, we can see it as a coherent tapestry woven from the threads of mathematical relationships. The projection of $z$ onto the real axis allows us to experience the world as we do, but it also suggests that there is a deeper, more intricate structure at play—one that transcends our immediate sensory perceptions. By embracing this mathematical framework, we open ourselves to new insights and understandings of the universe, revealing the profound connections that bind together the fundamental forces, particles, and the very essence of reality.
+
+<a href="./CHAPTER3.md" style="float:left">&lt;&lt; Chapter 3: Quantum Analogy</a>
+<a href="./CHAPTER5.md" style="float:right">Chapter 5: The Quadrants of the Complex Plane &gt;&gt;</a>
