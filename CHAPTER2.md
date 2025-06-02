@@ -67,4 +67,4 @@ This approach allows us to reinterpret the modulus $r$ as a spatial quantity (me
 The projection of $z$ on the real axis $m_z$ as a function of $\theta$, i.e., $r = m_z / cos(\theta)$, tells us that at different moments in time $m_z$ appears the same to us yet its $E_z$ changes.
 
 <a href="./CHAPTER1.md" style="float:left">&lt;&lt; Chapter 1: The Complex Plane: A Perspective</a>
-<a href="./CHAPTER3.md" style="float:right">Chapter 3: The Quadrants of the Complex Plane &gt;&gt;</a>
+<a href="./CHAPTER3.md" style="float:right">Chapter 3: The Quadrants and their Implications &gt;&gt;</a>
