@@ -1,6 +1,6 @@
 # The Mathematical Fabric of Reality
 
-Welcome! This work in progress pindaric flight explores mass, energy, space, and time in the complex plane.
+Welcome! This work in progress pindaric flight explores Energy, Mass, Space, and Time in the complex plane.
 
 ![Complex Plane Illustration](./media/EMTS.jpg)
 
