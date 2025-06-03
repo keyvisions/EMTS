@@ -48,16 +48,16 @@ This angle quantifies the relative contribution of energy and mass to the physic
 - **Modulus $r$ as Space (meters):**  
   If mass is measured in kilograms (kg) and energy in joules (J), we can use the speed of light $c$ to relate these to spatial units. For example, using Planck's constant $h$ and $c$, we can relate energy and mass to spatial scales, as in the Compton wavelength:
 
-  $$
-  \lambda = \frac{h}{mc}
-  $$
+$$
+\lambda = \frac{h}{mc}
+$$
 
 - **Argument $\theta$ as Time (seconds):**  
   The argument can be interpreted as time if we consider angular frequency $\omega$ (in radians per second), where $\theta = \omega t$. Here, Planck's constant $h$ (or reduced Planck's constant $\hbar$) connects energy and frequency:
   
-  $$
-  E = \hbar \omega
-  $$
+$$
+E = \hbar \omega
+$$
   
   Thus, $\theta$ increases linearly with time, and its value can be related to seconds through the angular frequency $\omega$.
 
