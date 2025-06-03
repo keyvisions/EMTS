@@ -18,10 +18,13 @@ To unify the physical dimensions of mass and energy in the complex plane, we int
 #### Modulus $r$ (Unified Magnitude)
 
 The modulus $r$ can be written as:
+
 $$
 r = \sqrt{(mc^2)^2 + E^2}
 $$
+
 Here, both terms are in units of energy (joules). Alternatively, if you prefer mass units:
+
 $$
 r = \sqrt{m^2 + \left(\frac{E}{c^2}\right)^2}
 $$
@@ -31,9 +34,11 @@ This formulation shows that $r$ represents a generalized "distance" in the mass-
 #### Argument $\theta$ (Unified Phase)
 
 The argument $\theta$ is given by:
+
 $$
 \theta = \arctan\left(\frac{E}{mc^2}\right)
 $$
+
 This angle quantifies the relative contribution of energy and mass to the physical state represented by $z$.
 
 ---
@@ -42,6 +47,7 @@ This angle quantifies the relative contribution of energy and mass to the physic
 
 - **Modulus $r$ as Space (meters):**  
   If mass is measured in kilograms (kg) and energy in joules (J), we can use the speed of light $c$ to relate these to spatial units. For example, using Planck's constant $h$ and $c$, we can relate energy and mass to spatial scales, as in the Compton wavelength:
+
   $$
   \lambda = \frac{h}{mc}
   $$
