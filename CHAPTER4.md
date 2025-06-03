@@ -4,5 +4,6 @@ In quantum theory, the wave function describes the state of a particle and encod
 
 This relationship between frequency and probability density can also be visualized in terms of energy levels. In quantum systems, particles occupy discrete energy levels, and transitions between these levels can be represented by changes in frequency. The density of states, which describes how many states are available at a given energy level, can be influenced by the oscillatory nature of the wave function. Thus, the frequency derived from our polar representation not only encapsulates the passage of time but also serves as a bridge to understanding the probabilistic nature of mass and energy in the quantum realm.
 
-<a href="./CHAPTER3.md" align="left">&lt;&lt; Chapter 3: The Quadrants and their Implications</a>
-<a href="./CHAPTER5.md" align="right">Chapter 5: Mapping Reality &gt;&gt;</a>
+| prev | next |
+| :--- | ---: |
+| [Chapter 3: The Quadrants and their Implications](./CHAPTER3.md) | [Chapter 5: Mapping Reality](./CHAPTER5.md) |
