@@ -29,7 +29,7 @@ $$
 r = \sqrt{m^2 + \left(\frac{E}{c^2}\right)^2}
 $$
 
-This formulation shows that $r$ represents a generalized "distance" in the mass-energy plane, with $c$ providing the necessary unit conversion.
+This formulation shows that $r$ represents a generalized "distance" or "space" in the mass-energy plane, with $c$ providing the necessary unit conversion.
 
 #### Argument $\theta$ (Unified Phase)
 
