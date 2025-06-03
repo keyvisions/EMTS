@@ -17,4 +17,4 @@ Delving deeper into the complex plane, we can explore the four quadrants and the
 Within this mathematical framework, specific regions of the complex plane could house the various particles that mediate these forces. For instance, bosons and leptons, as described in the Standard Model of particle physics, could occupy distinct areas within each quadrant, reflecting their unique properties and roles in the universe. This organization not only highlights the relationships between different particles and forces but also suggests a deeper symmetry and order underlying the chaotic nature of the physical world. By mapping these fundamental forces onto the complex plane, we gain a richer understanding of the universe's structure and the intricate dance of particles that define our reality.
 
 <a href="./CHAPTER2.md" style="float:left">&lt;&lt; Chapter 2: Polar Representation and Its Implications</a>
-<a href="./CHAPTER4.md" style="float:right">Chapter 4: Mapping Reality &gt;&gt;</a>
+<a href="./CHAPTER4.md" style="float:right">Chapter 4: Standard Model &gt;&gt;</a>

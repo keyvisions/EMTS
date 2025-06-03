@@ -1,4 +1,4 @@
-# Chapter 1: The Complex Plane: A Perspective
+# Chapter 1: The Complex Plane
 
 The connection between the complex plane and reality becomes especially significant when we consider the origins and applications of imaginary numbers. Historically, the introduction of imaginary numbers emerged from attempts to solve cubic equations, as first systematically explored by [Gerolamo Cardano](https://en.wikipedia.org/wiki/Gerolamo_Cardano) in the 16th century. Cardano discovered that even when all solutions to a cubic equation were real, the algebraic process sometimes required passing through intermediate steps involving the square roots of negative numbers—quantities that had no clear interpretation at the time.
 
