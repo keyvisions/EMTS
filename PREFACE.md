@@ -5,5 +5,5 @@ In the realm of scientific discovery, pure mathematics has often served as the b
 > Don't think it doesn't make sense; ask yourself what sense it could have.
 > — *myself*
 
-<a href="./README.md" style="float:left">&lt;&lt; The Complex Fabric of Reality</a>
-<a href="./CHAPTER1.md" style="float:right">Chapter 1: The Complex Plane &gt;&gt;</a>
+<a href="./README.md" align="left">&lt;&lt; The Complex Fabric of Reality</a>
+<a href="./CHAPTER1.md" align="right">Chapter 1: The Complex Plane &gt;&gt;</a>

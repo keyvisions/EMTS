@@ -8,5 +8,5 @@ Moreover, the very fabric of spacetime itself can be viewed as a geometric repre
 
 This perspective invites us to reconsider the nature of reality itself. Rather than viewing it as a collection of isolated events and entities, we can see it as a coherent tapestry woven from the threads of mathematical relationships. The projection of $z$ onto the real axis allows us to experience the world as we do, but it also suggests that there is a deeper, more intricate structure at play—one that transcends our immediate sensory perceptions. By embracing this mathematical framework, we open ourselves to new insights and understandings of the universe, revealing the profound connections that bind together the fundamental forces, particles, and the very essence of reality.
 
-<a href="./CHAPTER4.md" style="float:left">&lt;&lt; Chapter 4: Standard Model</a>
-<a href="./CHAPTER6.md" style="float:right">Chapter 6: Mathematical Interactions and Reality &gt;&gt;</a>
+<a href="./CHAPTER4.md" align="left">&lt;&lt; Chapter 4: Standard Model</a>
+<a href="./CHAPTER6.md" align="right">Chapter 6: Mathematical Interactions and Reality &gt;&gt;</a>
