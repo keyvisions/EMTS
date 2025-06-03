@@ -14,4 +14,4 @@ Figure 1: $m_z$ is what we perceive at time $\theta_0$ and space $r_0$.
 
 | prev | next |
 | :--- | ---: |
-| [Preface](./PREFACE.md) | [Chapter 2: Polar Representation and Its Implications](./PREFACE.md) |
+| [Preface](./PREFACE.md) | [Chapter 2: Polar Representation and Its Implications](./CHAPTER2.md) |
