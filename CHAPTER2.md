@@ -54,9 +54,11 @@ This angle quantifies the relative contribution of energy and mass to the physic
 
 - **Argument $\theta$ as Time (seconds):**  
   The argument can be interpreted as time if we consider angular frequency $\omega$ (in radians per second), where $\theta = \omega t$. Here, Planck's constant $h$ (or reduced Planck's constant $\hbar$) connects energy and frequency:
+  
   $$
   E = \hbar \omega
   $$
+  
   Thus, $\theta$ increases linearly with time, and its value can be related to seconds through the angular frequency $\omega$.
 
   Additionally, $\omega$ can be interpreted as relating to the likelihood or "density" of a state. If we consider the projection of $z$ onto the real axis as the realization of a physical state, then a higher frequency (larger $\omega$) implies a greater probability for that state to occur. In this framework, $\omega$ serves as an indicator of how frequently or densely a particular state (represented by $z$) is manifested in physical reality—the greater the frequency, the higher the probability or density of occurrence.
