@@ -1,4 +1,4 @@
-# Chapter 5: Mapping Reality
+# Chapter 5: Mapping Reality (TODO: Explore cosmological implications)
 
 As we consider the implications of this mapping, we begin to see that our perception of reality may be a projection of the complex number $z$ onto the real axis. This projection serves as a crucial bridge between the abstract mathematical constructs of the complex plane and the tangible physical phenomena we experience in our daily lives. By viewing reality through this lens, we can interpret the myriad interactions and behaviors of particles as reflections of the underlying mathematical relationships that govern them.
 
