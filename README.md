@@ -1,6 +1,6 @@
 # The Complex Fabric of Reality
 
-This work in progress pindaric flight explores **E**nergy, **M**ass, **T**ime and **S**pace in the complex plane.
+This ongoing work takes a speculative journey into how **E**nergy, **M**ass, **T**ime, and **S**pace might be interconnected through the complex plane, offering a framework for understanding reality.
 
 ![Complex Plane Illustration](./media/EMTS.jpg)
 
