@@ -12,7 +12,13 @@ The complex plane, a mathematical construct that allows us to visualize complex 
 
 Figure 1: $m_z$ is what we perceive at time $\theta_0$ and space $r_0$.
 
-<div style="display:flex; justify-content:space-between; width:100%;">
-  <a href="./PREFACE.md">← Preface</a>
-  <a href="./CHAPTER2.md">Chapter 2: Polar Representation and Its Implications →</a>
-</div>
+<table style="width:100%; table-layout:fixed;" width="100%">
+  <tr>
+    <td style="text-align:left;">
+      <a href="./PREFACE.md">← Preface</a>
+    </td>
+    <td style="text-align:right;">
+      <a href="./CHAPTER2.md">Chapter 2: Polar Representation and Its Implications →</a>
+    </td>
+  </tr>
+</table>

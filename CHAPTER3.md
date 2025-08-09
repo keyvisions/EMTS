@@ -56,7 +56,13 @@ recovering the time dependence in Chapter 2 via $θ = ω t$.
 - “Collapse” is $z → Re(z)$ and $ψ → P_mψ/||P_mψ||$.
 - The phase θ gains a dynamical origin from H; r sets overall scale (factored out in normalization).
 
-<div style="display:flex; justify-content:space-between; width:100%;">
-  <a href="./CHAPTER2.md">← Chapter 2: Polar Representation and Its Implications</a>
-  <a href="./CHAPTER4.md">Chapter 4: The Quadrants and their Implications →</a>
-</div>
+<table style="width:100%; table-layout:fixed;" width="100%">
+  <tr>
+    <td style="text-align:left;">
+      <a href="./CHAPTER2.md">← Chapter 2: Polar Representation and Its Implications</a>
+    </td>
+    <td style="text-align:right;">
+      <a href="./CHAPTER4.md">Chapter 4: The Quadrants and their Implications →</a>
+    </td>
+  </tr>
+</table>
