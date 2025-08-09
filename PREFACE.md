@@ -5,6 +5,7 @@ In scientific discovery, pure mathematics often serves as the bedrock of our und
 > Don't think it doesn't make sense; ask yourself what sense it could have.
 > — *myself*
 
-| prev | next |
-| :--- | ---: |
-| [The Complex Fabric of Reality](./README.md) | [Chapter 1: The Complex Plane](./CHAPTER1.md) |
+<div style="display:flex; justify-content:space-between; width:100%;">
+  <a href="./README.md">← The Complex Fabric of Reality</a>
+  <a href="./CHAPTER1.md">Chapter 1: The Complex Plane →</a>
+</div>

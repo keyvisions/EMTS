@@ -2,7 +2,9 @@
 
 This ongoing work takes a speculative journey into how **E**nergy, **M**ass, **T**ime, and **S**pace might be interconnected through the complex plane, offering a framework for understanding reality.
 
-![Complex Plane Illustration](./media/EMTS.jpg)
+<p align="center">
+  <img src="./media/EMTS.jpg" alt="Complex Plane Illustration">
+</p>
 
 Figure 1: $m_z$ is what we perceive at time $\theta_0$ and space $r_0$.
 

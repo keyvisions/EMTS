@@ -43,6 +43,7 @@ This connects the geometric projection from Chapter 2 with a quadrant-tagged phe
 
 Within this mathematical framework, specific regions of the complex plane could house the various particles that mediate these forces. For instance, bosons and leptons, as described in the Standard Model of particle physics, could occupy distinct areas within each quadrant, reflecting their unique properties and roles in the universe. This organization not only highlights the relationships between different particles and forces but also suggests a deeper symmetry and order underlying the chaotic nature of the physical world. By mapping these fundamental forces onto the complex plane, we gain a richer understanding of the universe's structure and the intricate dance of particles that define our reality.
 
-| prev | next |
-| :--- | ---: |
-| [Chapter 3: Hermitian Operators on a Hilbert Space](./CHAPTER3.md) | [Chapter 5: Standard Model](./CHAPTER5.md) |
+<div style="display:flex; justify-content:space-between; width:100%;">
+  <a href="./CHAPTER3.md">← Chapter 3: Hermitian Operators on a Hilbert Space</a>
+  <a href="./CHAPTER5.md">Chapter 5: Standard Model →</a>
+</div>

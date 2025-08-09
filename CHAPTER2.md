@@ -103,6 +103,7 @@ Notes and perspective:
 - We deliberately start from a minimal two-dimensional complex state as a common, simple ground; the working thesis is that complexity is layered simplicity. Richer state spaces (higher-dimensional Hilbert spaces, interactions) can be added atop this scaffold.
 - Empirical adequacy remains the criterion: any mapping from complex-plane projections to measurements should reproduce standard quantum predictions where applicable.
 
-| prev | next |
-| :--- | ---: |
-| [Chapter 1: The Complex Plane](./CHAPTER1.md) | [Chapter 2.5: Hermitian Operators on a Hilbert Space](./CHAPTER3.md) |
+<div style="display:flex; justify-content:space-between; width:100%;">
+  <a href="./CHAPTER1.md">← Chapter 1: The Complex Plane</a>
+  <a href="./CHAPTER3.md">Chapter 3: Hermitian Operators on a Hilbert Space →</a>
+</div>

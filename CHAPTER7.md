@@ -8,6 +8,7 @@ This perspective invites us to reconsider our understanding of the universe, cha
 
 Moreover, embracing this mathematical framework encourages interdisciplinary collaboration, as insights from mathematics, physics, and even philosophy converge to form a more holistic view of reality. As we explore the implications of these mathematical interactions, we may find ourselves on the brink of new discoveries that not only deepen our understanding of the universe but also expand the horizons of human knowledge. The potential for innovation and discovery is vast, as this perspective opens the door to exploring uncharted territories in both theoretical and experimental physics, ultimately reshaping our conception of what is possible in the realm of science.
 
-| prev | next |
-| :--- | ---: |
-| [Chapter 6: Mapping Reality](./CHAPTER6.md) | [Conclusion](./CONCLUSION.md) |
+<div style="display:flex; justify-content:space-between; width:100%;">
+  <a href="./CHAPTER6.md">← Chapter 6: Mapping Reality</a>
+  <a href="./CONCLUSION.md">Conclusion →</a>
+</div>
