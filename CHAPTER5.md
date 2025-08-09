@@ -21,14 +21,16 @@ This relationship between frequency and probability density can also be visualiz
 ### Collapse as generation of “reality” (matter) and “radiation”
 
 Conjecture:
-- Generation: perceptible reality is the projection $m_z=\operatorname{Re}(z)=r\cos\theta$ produced by collapse-like events. Persistent “matter” corresponds to stable sequences of consistent projections maintained by decoherence and conserved charges.
+- Generation: perceptible reality is the projection $m_z=\mathrm{Re}(z)=r\cos\theta$ produced by collapse-like events. Persistent “matter” corresponds to stable sequences of consistent projections maintained by decoherence and conserved charges.
 - Radiation: any state whose dynamics and couplings increase the rate of downstream collapses “radiates” new matter-states (localized outcomes) into its environment.
 
 Minimal rate model:
 - Let $z(t)=r\,e^{i\theta(t)}$ with $\dot\theta=\omega$ and force windows $W_f(\theta)$ (Chapter 4). With a phase-coupling $g(\theta,r)$, the cycle-averaged event rate into channel $f$ is
-  $$
-  R_f(r)\;=\;\frac{\omega}{2\pi}\int_0^{2\pi} W_f(\theta)\,g(\theta,r)\,d\theta.
-  $$
+
+$$
+R_f(r)\;=\;\frac{\omega}{2\pi}\int_0^{2\pi} W_f(\theta)\,g(\theta,r)\,d\theta.
+$
+
 - Examples: $g(\theta,r)=|\sin\theta|$ (energy salience) gives equal shares; force-specific profiles $g_f(\theta,r)=A_f(r)\,|\sin(\theta-\phi_f)|^p$ yield hierarchies and spectra.
 
 Interpretation:
