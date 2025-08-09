@@ -77,19 +77,25 @@ The projection of $z$ on the real axis $m_z$ as a function of $\theta$, i.e., $r
 ### Projection as Measurement: An Analogy to Wavefunction Collapse
 
 Interpreting $z = r(\cos\theta + i\sin\theta)$ as a two-component “state,” the real and imaginary parts act like amplitudes for two mutually exclusive outcomes. Projecting onto the real axis selects the “mass-like” component:
+
 $$
 m_z = \mathrm{Re}(z) = r\cos\theta.
 $$
 
 If we form a unit vector (ignoring the overall scale $r$):
+
 $$
 \lvert \psi \rangle = \cos\theta\,\lvert m \rangle + i\sin\theta\,\lvert E \rangle,
 $$
+
 then a measurement “in the mass basis” corresponds to the projector $P_m = \lvert m\rangle\langle m \rvert$. The Born rule gives
+
 $$
 \mathbb{P}(m) = \lvert \langle m \lvert \psi \rangle \rvert^2 = \cos^2\theta,
 $$
+
 and upon obtaining the mass outcome, the post-measurement state collapses to $\lvert m \rangle$ (the imaginary component is discarded), mirroring
+
 $$
 \lvert \psi \rangle \xrightarrow{\text{measure } m} \frac{P_m \lvert \psi \rangle}{\sqrt{\langle \psi \rvert P_m \lvert \psi \rangle}} = \lvert m \rangle,
 \qquad
