@@ -6,7 +6,7 @@ This mathematical curiosity turned out to be much more than a formal trick. The 
 
 Thus, imaginary numbers are not merely abstract constructs; they are indispensable tools for modeling and understanding the physical world. Their use reveals that reality possesses layers and symmetries that extend beyond direct sensory perception, hinting at a deeper mathematical structure underlying the universe. The complex plane, therefore, is not just a mathematical convenience but a window into the hidden fabric of nature.
 
-The complex plane, a mathematical construct that allows us to visualize complex numbers as points in a two-dimensional space. In this plane, the horizontal axis represents the real numbers, while the vertical axis represents the imaginary numbers. For our purposes, we will map **mass** onto the real axis and **energy** onto the imaginary axis. Why this choice? Well, mass seems more real than energy from my point of view (feel free to swap). With this picture in mind, let's pick a point $z_0$ on the complex plain and dive into its possible implications.
+The complex plane, a mathematical construct that allows us to visualize complex numbers as points in a two-dimensional space. In this plane, the horizontal axis represents the real numbers, while the vertical axis represents the imaginary numbers. For our purposes, we will map **mass** onto the real axis and **energy** onto the imaginary axis. Why this choice? Well, mass seems more real than energy from my point of view (feel free to swap). With this picture in mind, let's pick a point $z_0$ on the complex plane and dive into its possible implications.
 
 <p style="text-align:center"><img src="./media/EMTS.jpg" title="Complex Plane Illustration" /></p>
 

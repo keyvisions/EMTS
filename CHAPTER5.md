@@ -1,4 +1,4 @@
-# Chapter 4: Standard Model (TODO: Explore quantistic implications)
+# Chapter 5: Standard Model (TODO: Explore quantum implications)
 
 In quantum theory, the wave function describes the state of a particle and encodes information about its position and momentum. The square of the wave function's amplitude is interpreted as a probability density, indicating the likelihood of finding a particle in a particular state or location. In our model, the frequency of oscillation can be linked to this probability density. Higher frequencies may correspond to greater probabilities, suggesting that as the oscillations become more rapid, the likelihood of detecting a particle in a given state increases.
 

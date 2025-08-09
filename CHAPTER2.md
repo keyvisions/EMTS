@@ -105,4 +105,4 @@ Notes and perspective:
 
 | prev | next |
 | :--- | ---: |
-| [Chapter 1: The Complex Plane](./CHAPTER1.md) | [Chapter 2.5: Hermitian Operators on a Hilbert Space](./CHAPTER2_5.md) |
+| [Chapter 1: The Complex Plane](./CHAPTER1.md) | [Chapter 2.5: Hermitian Operators on a Hilbert Space](./CHAPTER3.md) |
