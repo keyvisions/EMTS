@@ -9,7 +9,7 @@ This ongoing work takes a speculative journey into how **E**nergy, **M**ass, **T
 Figure 1: $m_z$ is what we perceive at time $\theta_0$ and space $r_0$.
 
 ## Working Conjecture
-Space and time are each single-dimensional continua with (effectively) unbounded resolution. In this model, the modulus $r$ encodes “space” and the argument $\theta$ encodes “time”; observed discreteness arises from projection/measurement, not underlying granularity. Chapters 2–4 explore how $r$ and $\theta$ map to observables and how quadrant-dependent behavior may manifest as force channels.
+Space and time are each single-dimensional continua with (effectively) unbounded resolution. In this model, the modulus $r$ encodes “space” and the argument $\theta$ encodes “time”; observed discreteness arises from projection/measurement, not underlying granularity. Chapters 2–4 explore how $r$ and $\theta$ map to observables and how quadrant-dependent behavior may manifest as force channels. Figure 1 suggests that reality is the collapse of infinite $z_n$ or space/time combinations.
 
 - [Preface](./PREFACE.md)
 - [Chapter 1: The Complex Plane](./CHAPTER1.md)
