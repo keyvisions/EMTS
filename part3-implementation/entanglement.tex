@@ -1,0 +1,83 @@
+% Part III — Implementation
+\chapter{Entanglement on the Complex Plane}
+
+\section{Framing EMTS variables for entanglement}
+
+If EMTS takes physical events as points on the complex plane \(z=r\,e^{i\theta}\), with \(r\) encoding space and \(\theta\) encoding time, then two-system entanglement can be modeled on pairs \((z_A,z_B)\) by building joint states and correlators that respect EMTS' polar structure. In this view, time has two aspects: a monotone history variable (global \(\theta\)-translation) and a periodic phase (modulo \(2\pi\)), which naturally invites resonance phenomena and Floquet-like behavior in \(\theta\) space.
+
+\section{A minimal mathematical insertion}
+
+\subsection{State, reduction, and \(\theta\)-symmetry}
+\begin{itemize}
+  \item \textbf{Global state:} Let \(|\Psi\rangle\) live on a Hilbert space over EMTS points; for two subsystems \(A,B\) at \(z_A=r_A e^{i\theta_A}\), \(z_B=r_B e^{i\theta_B}\), write the joint amplitude \(\Psi(z_A,z_B)\).\cite{griffiths_qm}
+  \item \textbf{Entanglement test:} Compute \(\rho_A=\mathrm{Tr}_B\,|\Psi\rangle\langle\Psi|\) and a measure \(S_A=-\mathrm{Tr}(\rho_A\log\rho_A)\) (or a negativity). Entanglement is present iff \(\rho_A\) is mixed.
+  \item \textbf{\(\theta\)-translation invariance:} If dynamics and initial conditions are invariant under simultaneous shifts \(\theta_A\to\theta_A+\alpha\), \(\theta_B\to\theta_B+\alpha\), then any entanglement measure depends only on the phase difference \(\Delta\theta=\theta_A-\theta_B\) and the radii \((r_A,r_B)\), not on absolute \(\theta\) (stationarity):
+  \[
+  \partial_\Theta S_A=0,\quad \Theta=\tfrac{1}{2}(\theta_A+\theta_B).
+  \]
+\end{itemize}
+
+\subsection{Interaction kernels on the complex plane}
+\begin{itemize}
+  \item \textbf{Phase-sensitive coupling:}
+  \[
+  H_{\text{int}}=\lambda\, f(r_A,r_B)\,\cos(\Delta\theta-\phi_0)\, \hat{O}_A\otimes \hat{O}_B,
+  \]
+  which entangles \(A\) and \(B\) when \(f\neq 0\). The \(\cos(\Delta\theta)\) factor makes phase relations explicit; \(\phi_0\) sets a preferred phase alignment.
+  \item \textbf{Holomorphic form (optional):}
+  \[
+  H_{\text{int}}=\lambda\, g(z_A,z_B)\, \hat{O}_A\otimes \hat{O}_B+\text{h.c.},
+  \]
+  with \(g\) holomorphic to ensure Cauchy–Riemann compatibility in EMTS. This yields entanglement protected along contours of constant argument or modulus depending on \(g\).
+\end{itemize}
+
+\section{Resonance as phase-locking in \(\theta\)-time}
+
+\begin{itemize}
+  \item \textbf{Phase-locked entanglement:} If time has a periodic component, entanglement can strobe at resonant phase differences. With a drive of frequency \(\omega\) on \(\theta\), stroboscopic evolution produces
+  \[
+  U_F=e^{-i H_{\text{eff}} T},\quad T=\tfrac{2\pi}{\omega},
+  \]
+  and entanglement peaks when \(\Delta\theta\) satisfies locking conditions (e.g., \(\Delta\theta\approx \phi_0 \bmod 2\pi\)).
+  \item \textbf{Growth vs. invariance:} In generic (chaotic) dynamics, entanglement exhibits universal growth and saturation patterns (e.g., area-law to volume-law crossover with velocity \(v_E\)). “Entanglement is independent of time” can be realized when the initial state and generator are \(\theta\)-stationary so only \(\Delta\theta\) matters, or when a resonance creates steady phase-locking so the entanglement measure becomes \(\theta\)-periodic and effectively constant under coarse graining.
+\end{itemize}
+
+\section{Time independence and projection on the real axis}
+
+\begin{itemize}
+  \item \textbf{Projection choice matters:} If “projected on the real axis” means evaluating observables at fixed \(\theta\) (equal-time slice), entanglement reduces to a function of radii and their separation along \(r\), i.e., \(S_A=S_A(r_A,r_B,\Delta\theta)\) with \(\Delta\theta=0\). With \(\theta\)-translation invariance, this yields entanglement profiles depending only on spatial relations in \(r\).
+  \item \textbf{Integrating out \(\theta\):} Alternatively, integrating phases (or averaging over \(\Theta\)) leaves phase-invariant correlators:
+  \[
+  \overline{C}(r_A,r_B)=\frac{1}{2\pi}\int_0^{2\pi}\! d\Theta\ C\bigl(r_A e^{i(\Theta+\Delta\theta/2)},\, r_B e^{i(\Theta-\Delta\theta/2)}\bigr).
+  \]
+\end{itemize}
+
+\section{Testable consequences and a concrete ansatz}
+
+\subsection{A simple EMTS entangled pair}
+\[
+\Psi(z_A,z_B)=\frac{1}{\sqrt{2}}\Bigl[\phi_0(r_A)\phi_1(r_B)\,e^{i m(\theta_A-\theta_B)}+\phi_1(r_A)\phi_0(r_B)\,e^{-i m(\theta_A-\theta_B)}\Bigr].
+\]
+\begin{itemize}
+  \item \textbf{Label:} \(m\) is a winding in \(\Delta\theta\); \(\phi_{0,1}\) control localization in \(r\).
+  \item \textbf{Property:} Entanglement is maximal and independent of \(\Theta\); tuning \(m\) sets resonance channels in \(\Delta\theta\).
+\end{itemize}
+
+\subsection{Dynamics with resonance}
+Use \(H_{\text{int}}(t)=\lambda(t)\, f(r_A,r_B)\cos(\Delta\theta-\phi_0)\,\hat{O}_A\otimes\hat{O}_B\) with \(\lambda(t+T)=\lambda(t)\). Predict:
+\begin{itemize}
+  \item \textbf{Locking:} Stable entanglement plateaus at \(\Delta\theta\approx \phi_0\).
+  \item \textbf{Velocity bounds:} Expect entanglement growth bounded by an effective \(v_E\) and shaped by a “line tension,” analogous to results in Floquet and chaotic circuits.
+  \item \textbf{Equal-\(\theta\) slices:} On \(\Delta\theta=0\), entanglement reduces to spatial profiles along \(r\).
+\end{itemize}
+
+\section{Bridge to EMTS geometry}
+\subsection{Core translation}
+Any normalized two-level state can be written
+\[
+|\psi\rangle = \cos\theta\,|m\rangle + i\,\sin\theta\,|E\rangle,
+\]
+so the geometric angle \(\theta\) from \(z = r e^{i\theta}\) becomes the parameter in the quantum superposition. Measurements use projectors like \(P_m = |m\rangle\langle m|\) giving \(P(m)=\cos^2\theta\). A simple Hamiltonian \(H = (\hbar\omega/2)\,\sigma_y\) rotates probability between \(|m\rangle\) and \(|E\rangle\) at angular frequency \(\omega\).\cite{griffiths_qm}
+
+\subsection{Link to the geometry}
+The real-axis projection in the complex picture becomes applying \(P_m\) in Hilbert space; “collapse” corresponds to projecting \(z\) to \(\operatorname{Re}(z)\) and normalizing. The radial coordinate \(r\) controls overall scale but is factored out in quantum normalization.

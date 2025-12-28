@@ -1,0 +1,50 @@
+% Part IV — Future
+\chapter{Toward a Theory of Everything}
+
+We let the state live on spacetime times a cyclic phase, and evolve by an operator that ties curvature, gauge forces, and the \(\theta\)-phase that mixes mass and energy, in the spirit of relativity\cite{einstein1905} and quantum field theory.\cite{peskin_schroeder}
+
+\section{State and geometry}
+Configuration \(\mathcal{M}\times S^1_\theta\) with Lorentzian metric \(g_{\mu\nu}(x)\). A field \(\Psi(x,\theta,t)\) is normalized on the circle:
+\[
+\int_{0}^{2\pi}\! d\theta\, \Psi^\dagger\Psi = 1.
+\]
+Mass–energy projections introduce a single scale \(E_\ast\):
+\[
+\hat{M}(\theta)c^2 = E_\ast \cos\theta,\qquad \hat{E}(\theta)=E_\ast \sin\theta.
+\]
+
+\section{Dynamics on spacetime and phase}
+\[
+i\hbar\,\mathcal{N}(x,\rho)\,\partial_t \Psi=
+\Big[-i\hbar c\,\gamma^a e_a^{\ \mu}(x)\,D_\mu + \beta\,E_\ast \cos\theta + E_\ast \sin\theta - \frac{\hbar^2}{2I_\theta}\,\partial_\theta^2 + U_{\text{quad}}(\theta)\Big]\Psi.
+\]
+Tetrads \(e_a^{\ \mu}\) encode curvature; \(I_\theta\) sets phase inertia; \(U_{\text{quad}}\) is a smooth \(2\pi\)-periodic potential that carves the circle into force sectors; \(\mathcal{N}(x,\rho)\) rescales clock rate and links to gravity.
+
+\section{Gauge sectors and interactions}
+Sector projectors \(\{P_s(\theta)\}\) with \(\sum_s P_s(\theta)=1\). Covariant derivative:
+\[
+D_\mu = \nabla_\mu - i\sum_s g_s(\theta)\,P_s(\theta)\,A^{(s)}_\mu(x) - i\,q\,\mathcal{A}_\mu(x,\theta).
+\]
+Topological charge arises from winding in \(\theta\); eigenmodes of \(-\partial_\theta^2+U_{\text{quad}}\) form a tower of allowed “flavors.”
+
+\section{Gravity via density-tied phase speed}
+Local redshift from density:
+\[
+\mathcal{N}(x,\rho)=\sqrt{-g_{00}(x)}\,F(\rho(x)),\quad \rho(x)=\int d\theta\,\Psi^\dagger\Psi\,E_\ast.
+\]
+Backreaction (mean-field GR): \(G_{\mu\nu}(x)=\tfrac{8\pi G}{c^4}\,\langle T_{\mu\nu}\rangle\).
+
+\section{Limiting cases and checks}
+Nonrelativistic quantum mechanics near a sector minimum; Standard Model couplings from \(P_s(\theta)\); mass generation from the \(\cos\theta\) term; classical gravity from hydrodynamic limit; particle spectra from the \(\theta\)-Laplacian plus \(U_{\text{quad}}\).
+
+\section{Master equation with variable radius}
+Allowing \(r\) to vary adds polar kinetics and a scale potential \(U_r(r)\). A unified evolution reads
+\[
+i\hbar\,\mathcal{N}(x,\rho,r)\,\partial_t \Psi
+=\Big[-i\hbar c\,\gamma^a e_a^{\ \mu}(x)\,\mathcal{D}_\mu - \frac{\hbar^2}{2I_r}\big(\partial_r^2+\tfrac{1}{r}\partial_r\big) - \frac{\hbar^2}{2I_\theta}\frac{1}{r^2}\,\partial_\theta^2 + V(r,\theta)\Big]\Psi,
+\]
+with
+\[
+V(r,\theta)=U_r(r)+U_{\text{quad}}(\theta)+U_{\text{mix}}(r,\theta),
+\]
+and a covariant derivative accounting for gauge, scale, and gravity.

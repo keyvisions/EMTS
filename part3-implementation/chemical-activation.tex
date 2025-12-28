@@ -1,0 +1,27 @@
+% Part III — Implementation
+\chapter{Chemical Activation Analogue}
+
+This section borrows the logic of chemical activation diagrams and transplants it into the mass–energy–phase plane.
+
+\section{Analogy}
+In chemistry, an activation diagram plots potential energy vs. reaction coordinate. Here, the “reaction coordinate” is a path in \((r,\theta)\): initial \(z_i=r_i e^{i\theta_i}\), final \(z_f=r_f e^{i\theta_f}\), and a barrier as a dynamically disfavoured region.
+
+\section{Activation mass–energy}
+The activation energy becomes an activation mass–energy: the extra \(|z|\) or angular displacement needed to connect two states.
+
+\section{Manipulating mass/energy}
+\begin{itemize}
+  \item \textbf{Catalysis analogue:} Introduce an intermediate path bending through a quadrant with a lower barrier; mediators or fields change the allowed trajectory so the peak \(|z|\) is smaller.
+  \item \textbf{Phase-assisted transitions:} Because \(\theta\) is cyclic, one can wrap around instead of going straight over, akin to tunnelling.
+  \item \textbf{Density-tuned activation:} If \(\omega(\rho,r)\) changes effective heights, altering local density can lower the barrier via phase-resonance.
+\end{itemize}
+
+\section{Diagrammatic representation}
+Plot total \(|z|=r\) vs. path length along \((r,\theta)\); different complex-plane paths yield different activation curves.
+
+\section{Formalization}
+Define an activation functional for a path \(\gamma\):
+\[
+\mathcal{A}[\gamma] = \max_{s\in\gamma} \bigl[ r(s) - \min(r_i,r_f) \bigr],
+\]
+and search for paths minimizing \(\mathcal{A}\) subject to complex-plane conservation laws. Catalysts, fields, or density changes are deformations of \(U(r,\theta)\) that reduce \(\mathcal{A}\).

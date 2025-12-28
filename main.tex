@@ -1,0 +1,49 @@
+\documentclass[11pt,oneside]{book}
+
+% Preamble
+\input{preamble/packages}
+\input{preamble/formatting}
+\input{preamble/commands}
+
+\begin{document}
+\frontmatter
+\input{frontmatter/titlepage}
+\input{frontmatter/dedication}
+\tableofcontents
+\input{frontmatter/license}
+\input{frontmatter/preface}
+
+\mainmatter
+% Part I (Foundations)
+\part{Foundations}
+\input{part1-foundations/complex-plane}
+\input{part1-foundations/polar-representation}
+\input{part1-foundations/hermitian-operators}
+\input{part1-foundations/fundamental-forces}
+
+% Part II (Framework Mechanics)
+\part{Framework and Mechanics}
+\input{part2-framework-mechanics/standard-model}
+\input{part2-framework-mechanics/mapping-reality}
+\input{part2-framework-mechanics/quantum-properties}
+
+% Part III (Implementation)
+\part{Implementation}
+\input{part3-implementation/entanglement}
+\input{part3-implementation/feynman-diagrams}
+\input{part3-implementation/periodic-table}
+\input{part3-implementation/chemical-activation}
+
+% Part IV (Future)
+\part{Future Directions}
+\input{part4-future/philosophy}
+\input{part4-future/theory-of-everything}
+
+\backmatter
+\input{backmatter/conclusion}
+\input{backmatter/arguments}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{bibliography/references}
+
+\end{document}

@@ -1,0 +1,10 @@
+\chapter{Hermitian Operators on a Hilbert Space}
+Let $H=\mathbb{C}^2$ with basis $\{\lvert m\rangle,\lvert E\rangle\}$. A normalized state is
+\[
+\lvert \psi \rangle = \cos\theta\,\lvert m \rangle + i\sin\theta\,\lvert E \rangle,\qquad \langle \psi \vert \psi \rangle=1.
+\]
+Observables $A$ are Hermitian with spectral decomposition $A=\sum_k a_k P_k$. Measurement of $a_k$ occurs with probability $\langle \psi \vert P_k \vert \psi \rangle$ and the post-measurement state is $P_k\lvert\psi\rangle/\sqrt{\langle \psi \vert P_k \vert \psi \rangle}$.
+
+For a “mass” measurement, $P_m=\lvert m\rangle\langle m\rvert$, so $\mathbb{P}(m)=\cos^2\theta$, echoing the geometric projection $\Re(z)=r\cos\theta$.
+
+Unitary evolution with $H=\tfrac{\hbar\omega}{2}\sigma_y$ yields $\mathbb{P}(m,t)=\cos^2(\omega t)$, bridging to $\theta=\omega t$.\cite{griffiths_qm}

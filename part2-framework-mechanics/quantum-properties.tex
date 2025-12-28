@@ -1,0 +1,61 @@
+\chapter{Quantum Properties on the Complex Plane}
+
+Quantum behaviour can be reframed in the EMTS picture where $z = m + iE = r e^{i\theta}$, with $r$ linked to space and $\theta$ to time, as introduced in [part1-foundations/polar-representation.tex](part1-foundations/polar-representation.tex) and [part1-foundations/hermitian-operators.tex](part1-foundations/hermitian-operators.tex). Projection to the real axis encodes what is classically observed, while the full complex motion remains hidden but dynamically essential.
+
+\section{Wave--particle duality as rotating projection}
+
+Take a single point $z(t)=r e^{i\theta(t)}$ with $\theta(t)=\omega t$. The real projection
+\[
+m_z(t)=\Re z(t)=r\cos\theta(t)
+\]
+oscillates, while discrete detection events correspond to sampling $m_z$ at particular $\theta$ and locations in $r$. The ``wave'' is the smooth, complex rotation; the ``particle'' is the localized real-axis readout.
+
+When several paths $z_k(t)$ are allowed, they add in the complex plane before projection:
+\[
+z_{\text{tot}}(t)=\sum_k z_k(t).
+\]
+Interference patterns arise because $\Re z_{\text{tot}}$ depends on relative angles $\theta_k$, not just moduli $r_k$, mirroring standard complex-amplitude interference from [part2-framework-mechanics/standard-model.tex](part2-framework-mechanics/standard-model.tex).
+
+\section{Superposition as geometric addition}
+
+A superposed state of two alternatives $A$ and $B$ becomes a vector sum
+\[
+z = \alpha z_A + \beta z_B,
+\]
+with $\alpha,\beta\in\C$ encoding weights and phases. Only after projection does one obtain an outcome associated with $z_A$ or $z_B$, analogous to
+\[
+\lvert \psi \rangle = \cos\theta\,\lvert m\rangle + i\sin\theta\,\lvert E\rangle
+\]
+in [part1-foundations/hermitian-operators.tex](part1-foundations/hermitian-operators.tex). The angle between $z_A$ and $z_B$ in the plane governs constructive or destructive interference in $\Re z$, giving a geometric visualization of the Born rule.
+
+\section{Uncertainty as phase--projection complementarity}
+
+If reality is read off as the real projection $m_z=r\cos\theta$, then sharp knowledge of $m_z$ constrains $\theta$ to narrow windows where $m_z$ takes that value. Conversely, if $\theta$ is highly delocalized over $[0,2\pi)$, many different $m_z$ values are sampled.
+
+Formally, treat $\theta$ as an angle on a circle and its conjugate as an integer winding number $n$ (counting how many $2\pi$ cycles the phase accumulates). Angle--number pairs satisfy an uncertainty relation of the form
+\[
+\Delta n\,\Delta\theta \gtrsim \tfrac{1}{2},
+\]
+which mirrors $\Delta E\,\Delta t$ once $E$ is tied to angular frequency via $E=\hbar\omega$. In EMTS, the spread in $\theta$ (time-like phase) and the spread in $m_z$ (measured mass-like projection) are thus inherently linked, explaining why precise localization in one degrades certainty in the other.
+
+\section{Quantization from closed-orbit conditions}
+
+Quantization appears naturally if allowed states correspond to closed or resonant trajectories on the complex circle. Requiring that after an evolution period $T$ the point returns to itself,
+\[
+\theta(T)-\theta(0)=2\pi n,\qquad n\in\mathbb{Z},
+\]
+imposes discrete conditions on $\omega$ and hence on $E=\hbar\omega$. More generally, demanding single-valuedness of $\Psi(r,\theta)$ on $S^1_\theta$---as in the phase space discussed in [part4-future/theory-of-everything.tex](part4-future/theory-of-everything.tex)---forces integer winding numbers and a tower of allowed modes. The complex circle then acts as a geometric origin for energy levels and other quantized spectra.
+
+\section{Entanglement as correlated complex geometry}
+
+For two subsystems $A,B$ with points $z_A=r_A e^{i\theta_A}$ and $z_B=r_B e^{i\theta_B}$, an entangled state can be represented by a joint amplitude $\Psi(z_A,z_B)$ on the product of two complex planes, as developed in [part3-implementation/entanglement.tex](part3-implementation/entanglement.tex). A simple form,
+\[
+\Psi(z_A,z_B)\propto e^{i m(\theta_A-\theta_B)},
+\]
+locks their phase difference while leaving the common angle free. Measurements project each point separately to the real axis, but correlations in outcomes reflect the underlying constraint on $(\theta_A,\theta_B)$ and hence on $(m_{z_A},m_{z_B})$.
+
+In this view, entanglement is not mysterious action at a distance but a single geometric object on $(z_A,z_B)$ space whose projections on separate real axes remain correlated even when $r_A$ and $r_B$ are widely separated.
+
+\section{Summary}
+
+Wave--particle duality, superposition, uncertainty, quantization, and entanglement all become features of how complex points move, add, and close on the EMTS plane, and how partial projections slice this richer geometry into the classical realities we observe.

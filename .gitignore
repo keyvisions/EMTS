@@ -1,0 +1,14 @@
+# Build artifacts
+/build/
+*.aux
+*.log
+*.synctex.gz
+*.toc
+*.out
+*.bbl
+*.blg
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+.vscode/

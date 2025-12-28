@@ -1,22 +1,34 @@
-# The Complex Fabric of Reality
+# EMTS Book
 
-This ongoing work takes a speculative journey into how **E**nergy, **M**ass, **T**ime, and **S**pace might be interconnected through the complex plane, offering a framework for understanding reality.
+A LaTeX book for the EMTS framework (Energy, Mass, Time, Space).
 
-<p align="center">
-  <img src="./media/EMTS.jpg" alt="Complex Plane Illustration">
-</p>
+## Project Structure
 
-Figure 1: $m_z$ is what we perceive at time $\theta_0$ and space $r_0$.
+```
+├── main.tex                    # Main document
+├── build.sh                    # Build script (pdflatex + bibtex)
+├── preamble/                   # Packages, formatting, commands
+├── frontmatter/                # Title, license, preface
+├── part1-foundations/          # Foundations chapters
+├── part2-framework-mechanics/  # Framework and mechanics
+├── part3-implementation/       # Implementation chapters
+├── part4-future/               # Future directions
+├── backmatter/                 # Conclusion, arguments/notes
+├── bibliography/               # references.bib
+└── figures/                    # Images
+```
 
-## Working Conjecture
-Space and time are each single-dimensional continua with (effectively) unbounded resolution. In this model, the modulus $r$ encodes “space” and the argument $\theta$ encodes “time”; observed discreteness arises from projection/measurement, not underlying granularity. Chapters 2–4 explore how $r$ and $\theta$ map to observables and how quadrant-dependent behavior may manifest as force channels. Figure 1 suggests that reality is the collapse of infinite $z_n$ or space/time combinations.
+## Build
 
-- [Preface](./PREFACE.md)
-- [Chapter 1: The Complex Plane](./CHAPTER1.md)
-- [Chapter 2: Polar Representation and its Implications](./CHAPTER2.md)
-- [Chapter 3: Hermitian Operators on a Hilbert Space](./CHAPTER3.md)
-- [Chapter 4: The Quadrants and their Implications](./CHAPTER4.md)
-- [Chapter 5: Standard Model](./CHAPTER5.md)
-- [Chapter 6: Mapping Reality](./CHAPTER6.md)
-- [Chapter 7: Mathematical Interactions and Reality](./CHAPTER7.md)
-- [Conclusion](./CONCLUSION.md)
+Run the quick build:
+
+```bash
+./build.sh
+```
+
+This compiles `main.tex` into `EMTS.pdf`.
+
+## Notes
+
+- Bibliography: edit `bibliography/references.bib`. All entries are included via `\nocite{*}`.
+- Build prerequisites: a LaTeX distribution with BibTeX (TeX Live or MiKTeX) and common packages (amsmath, amssymb, graphicx, hyperref, fancyvrb).

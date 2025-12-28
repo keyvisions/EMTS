@@ -1,0 +1,61 @@
+% Part III — Implementation
+\chapter{Feynman Diagrams on the Complex Plane}
+
+Let's reinterpret Feynman diagrams in this framework. Instead of drawing them in the usual spacetime coordinates, plot each particle's ``state vector'' \(z = m + iE\) in the mass--energy plane, with radius \(r\) linked to space and angle \(\theta\) linked to time. Each line in a diagram becomes a curve
+\[
+  \gamma(\lambda) : [0,1] \to \mathbb{C}, \qquad \gamma(\lambda) = r(\lambda) e^{i\theta(\lambda)},
+\]
+with \(\lambda\) a path parameter. External legs are \emph{open} curves, anchored to asymptotic ``in'' and ``out'' states, while internal lines and loops can form \emph{closed} or self-intersecting curves that encode virtual processes.
+
+\section{Particles as trajectories in the plane}
+\begin{itemize}
+  \item \textbf{External legs:} Each external particle is an open curve in the complex plane from an initial \(z_i\) to a final \(z_f\), representing how its mass--energy configuration evolves between preparation and detection.
+  \item \textbf{Massive vs. massless:} Massless particles (photons, gluons) follow paths hugging the imaginary axis; massive particles trace tilted paths with significant real component.
+  \item \textbf{Neutrinos:} Almost vertical lines near the imaginary axis, with tiny real offset.
+  \item \textbf{Quarks:} Confined loops in the strong-force quadrant, never escaping to free-particle regions.
+\end{itemize}
+
+In this picture, a conventional Feynman diagram is not just a graph of lines and vertices but a collection of curves \(\{\gamma_i\}\) drawn on the same complex plane, meeting at junctions that enforce complex conservation laws.
+
+\section{Vertices as junctions of complex vectors}
+A vertex is a point where several \(z\)-vectors meet, and complex-vector conservation applies:
+\[
+\sum_{\text{in}} z = \sum_{\text{out}} z.
+\]
+The quadrant in which the vertex sits indicates the mediating force (e.g., EM, weak, strong).
+
+\section{Propagators as arcs or spirals}
+\begin{itemize}
+  \item \textbf{Massive propagator:} Spiral with both radial and angular change (space and time evolution).
+  \item \textbf{Massless propagator:} Pure angular advance at fixed radius (lightlike).
+  \item \textbf{Virtual particles:} Paths that wander into ``unphysical'' quadrants or cross branch cuts; their projection on the real axis may be zero or negative.
+\end{itemize}
+
+Each propagator thus corresponds to a family of admissible curves between two points \(z_a\) and \(z_b\). In a path-integral spirit, the physical amplitude weights these curves by a phase factor depending on the ``action'' along the path in the complex plane.\cite{peskin_schroeder}
+
+\section{Curves and amplitudes}
+For a given scattering process, standard quantum field theory assigns an amplitude by summing over all compatible Feynman diagrams. In the complex-plane view, this becomes a sum over classes of curves:
+\[
+  \mathcal{A}_{\text{process}} \sim \sum_{\text{diagrams}} \; \sum_{\{\gamma_i\}} e^{i S[\{\gamma_i\}]},
+\]
+where the action functional \(S[\{\gamma_i\}]\) depends on how the curves wind, which quadrants they traverse, and how they meet at vertices. Open curves carry the quantum numbers of external particles, while closed curves (loops) encode vacuum fluctuations and radiative corrections.
+
+In this hypothesis, momentum conservation and on/off-shell conditions translate into geometric constraints on allowed curve shapes and endpoints in the \(m\)--\(E\) plane. Different diagram topologies then correspond to different homotopy classes of curve-collections, offering a topological handle on selection rules and interference.
+
+\section{Loops and quantum corrections}
+Loop diagrams in QFT become closed loops in the complex plane.\cite{peskin_schroeder} The winding number of the loop can correspond to a conserved quantum number (charge, baryon number). Divergences may appear as loops that shrink toward the origin \(z=0\), requiring renormalization as a deformation away from the singularity.
+
+\section{Example: Electron–neutrino scattering}
+\begin{itemize}
+  \item \textbf{Initial state:} Electron \(z_e\) in Q4 (positive mass, negative binding energy), neutrino \(z_\nu\) near imaginary axis.
+  \item \textbf{Vertex:} Weak-force quadrant (Q2), where a W boson is exchanged.
+  \item \textbf{Propagator:} W boson path arcs from electron’s \(z\) to neutrino’s \(z\), crossing the imaginary axis.
+  \item \textbf{Final state:} New \(z\) positions for outgoing electron and neutrino, conserving the complex sum.
+\end{itemize}
+
+\section{Why this is interesting}
+\begin{itemize}
+  \item \textbf{Unified conservation:} Mass and energy conservation become one complex equation at each vertex.
+  \item \textbf{Virtuality geometry:} Off-shell particles are “off-axis.”
+  \item \textbf{Topological insight:} Winding numbers and quadrant crossings give visual handles on selection rules and forbidden processes.
+\end{itemize}
