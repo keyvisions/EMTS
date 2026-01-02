@@ -36,10 +36,20 @@ jobs:
       - name: Build PDF
         run: ./build.sh
 
+      - name: Prepare Pages content
+        run: |
+          mkdir -p public
+          cp index.html public/
+          cp EMTS.pdf public/
+          if [ -f figures/EMTS.png ]; then
+            mkdir -p public/figures
+            cp figures/EMTS.png public/figures/
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: public
   deploy:
     needs: build
     runs-on: ubuntu-latest
