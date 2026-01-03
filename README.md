@@ -1,34 +1,21 @@
-# EMTS Book
+# EMTS: Energy, Mass, Time, Space
 
-A LaTeX book for the EMTS framework (Energy, Mass, Time, Space).
+EMTS is a speculative, mathematics-first exploration of a simple question:
 
-## Project Structure
+> What if Energy, Mass, Time, and Space (EMTS) can be captured in a single coherent mathematical framework?
 
-```
-├── main.tex                    # Main document
-├── build.sh                    # Build script (pdflatex + bibtex)
-├── preamble/                   # Packages, formatting, commands
-├── frontmatter/                # Title, license, preface
-├── part1-foundations/          # Foundations chapters
-├── part2-framework-mechanics/  # Framework and mechanics
-├── part3-implementation/       # Implementation chapters
-├── part4-future/               # Future directions
-├── backmatter/                 # Conclusion, arguments/notes
-├── bibliography/               # references.bib
-└── figures/                    # Images
-```
+This book develops that framework step by step, then asks how it might connect to known physics (complex analysis, quantum mechanics, the Standard Model, entanglement, chemistry, and beyond). It is written as an essay in ongoing collaboration with AI: a perspective, not a declaration, meant to invite "what if?" thinking rather than to claim final answers.
 
-## Build
+![EMTS framework on the complex plane](figures/EMTS.jpg)
 
-Run the quick build:
+*Figure: the EMTS framework visualized on the complex plane, with mass mapped to the real axis and energy to the imaginary axis at a given radius and angle.*
 
-```bash
-./build.sh
-```
+## Objective of the Book
 
-This compiles `main.tex` into `EMTS.pdf`.
+- Define a mathematical structure that ties together Energy, Mass, Time, and Space (EMTS).
+- Build the framework from familiar mathematical objects (complex plane, polar representation, Hermitian operators, fundamental forces).
+- Explore how this EMTS framework could map onto established physical theories (Standard Model, quantum properties, field interactions).
+- Illustrate potential implementations and consequences (entanglement, Feynman diagrams, periodic table structure, chemical activation).
+- Speculate on future directions, including philosophical implications and a possible path toward a "theory of everything".
 
-## Notes
-
-- Bibliography: edit `bibliography/references.bib`. All entries are included via `\nocite{*}`.
-- Build prerequisites: a LaTeX distribution with BibTeX (TeX Live or MiKTeX) and common packages (amsmath, amssymb, graphicx, hyperref, fancyvrb).
+The work is intentionally exploratory: it is designed to be readable by mathematically inclined readers who are comfortable with undergraduate-level complex analysis and basic quantum mechanics, but it does not assume professional physics expertise.
