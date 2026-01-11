@@ -1,22 +1,18 @@
 \chapter{Polar Representation and Its Implications}
-Mapping mass and energy in the complex plane broadens our perspective on physical reality. Consider a point $z$ expressed in polar form:
-\[
-z = r(\cos\theta + i\sin\theta).
-\]
-Here $r$ is the modulus and $\theta$ the argument. Assign physical meaning to $r$ and $\theta$:
 
-\paragraph{Modulus $r$ (Unified Magnitude).}
+Building on the core framework (Chapter~\ref{ch:emts-framework}), we explore deeper implications of the polar representation $\EMTSz$. This chapter examines how the modulus $r$ and argument $\theta$ relate to physical measurements and quantum phenomena.
+
+\section{Extended physical interpretation}
+
+The modulus and argument were defined in the core framework as:
 \[
-r = \sqrt{(mc^2)^2 + E^2} \quad \text{or} \quad r = \sqrt{m^2 + \left(\tfrac{E}{c^2}\right)^2}.
+r = \sqrt{m^2 + E^2}, \qquad \theta = \arctan\!\left(\frac{E}{m}\right).
 \]
 
-\paragraph{Argument $\theta$ (Unified Phase).}
-\[
-\theta = \arctan\!\left(\frac{E}{mc^2}\right).
-\]
+In units where $c=1$, or more generally $r = \sqrt{(mc^2)^2 + E^2}$ and $\theta = \arctan(E/mc^2)$.
 
 \paragraph{Space and Time.}
-Interpret $\theta=\omega t$ with $E=\hbar\omega$. Then probabilities or densities linked to projections oscillate with $\omega$. The projection $m_z=\Re(z)=r\cos\theta$ can repeat with period $2\pi$ even as the underlying phase history differs.
+The key relation $\phaseTime$ with $E=\hbar\omega$ means probabilities or densities linked to projections oscillate with $\omega$. The projection $m_z=\Re(z)=\projReal$ can repeat with period $2\pi$ even as the underlying phase history differs.
 
 \paragraph{Projection as Measurement.}
-With the unit vector $\lvert \psi \rangle = \cos\theta\,\lvert m \rangle + i\sin\theta\,\lvert E \rangle$, a mass measurement uses $P_m$ and yields $\mathbb{P}(m)=\cos^2\theta$, mirroring $m_z=r\cos\theta$. Standard treatments of such two-level mappings can be found in Griffiths\cite{griffiths_qm}.
+With the unit vector $\lvert \psi \rangle = \cos\theta\,\lvert m \rangle + i\sin\theta\,\lvert E \rangle$, a mass measurement uses $P_m$ and yields $\mathbb{P}(m)=\cos^2\theta$, mirroring $m_z=\projReal$. Standard treatments of such two-level mappings can be found in Griffiths\cite{griffiths_qm}.

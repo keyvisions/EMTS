@@ -1,0 +1,169 @@
+% Part I — Foundations
+\chapter{The EMTS Framework: Core Definitions}
+\label{ch:emts-framework}
+
+Having introduced the complex plane and its historical significance, we now establish the foundational elements of the Energy-Mass-Time-Space (EMTS) framework. This chapter consolidates the core mathematical definitions and physical interpretations that underpin the entire theory.
+
+\section{The complex plane mapping}
+\label{sec:complex-mapping}
+
+The EMTS framework posits that physical states can be represented as points in the complex plane:
+\[
+z = m + iE,
+\]
+where:
+\begin{itemize}
+\item $m$ is the mass component (mapped to the real axis)
+\item $E$ is the energy component (mapped to the imaginary axis)
+\item $i = \sqrt{-1}$ is the imaginary unit
+\end{itemize}
+
+This choice reflects the intuition that mass is "more tangible" than energy in everyday experience, though the mapping could be reversed without loss of generality. What matters is the \emph{relationship} between the components, not which axis they occupy.
+
+\section{Polar representation}
+\label{sec:polar-rep}
+
+Every complex point $z$ can be expressed in polar form:
+\[
+z = r e^{i\theta} = r(\cos\theta + i\sin\theta),
+\]
+where:
+\begin{itemize}
+\item $r = |z| = \sqrt{m^2 + E^2}$ is the \textbf{modulus} (unified magnitude)
+\item $\theta = \arg(z) = \arctan(E/m)$ is the \textbf{argument} (unified phase)
+\end{itemize}
+
+\subsection{Physical interpretation of $r$ and $\theta$}
+
+The modulus $r$ represents the total mass-energy content:
+\[
+r = \sqrt{(mc^2)^2 + E^2} \quad \text{or in natural units} \quad r = \sqrt{m^2 + E^2}.
+\]
+
+The argument $\theta$ encodes the \textbf{partition} between mass and energy:
+\begin{align}
+m &= r\cos\theta, \\
+E &= r\sin\theta.
+\end{align}
+
+Crucially, we identify $\theta$ with time evolution:
+\[
+\theta(t) = \omega t,
+\]
+where $\omega$ is the angular frequency related to energy by $E = \hbar\omega$ (Planck's quantum hypothesis).
+
+\subsection{The projection principle}
+\label{sec:projection-principle}
+
+\textbf{Central postulate:} Physical reality corresponds to the \emph{projection} of the complex state onto the real axis:
+\[
+\text{Observable reality} = \Re(z) = m = r\cos\theta.
+\]
+
+This projection is \textbf{many-to-one}: infinitely many complex states
+\[
+\{z_n = m + iE_n\}_{n}
+\]
+all project to the same observable value $m$. The imaginary component $E$ represents hidden degrees of freedom that influence dynamics but are not directly observed.
+
+\section{Fundamental relationships}
+\label{sec:fundamental-relations}
+
+\subsection{Time as phase}
+
+The identification $\theta = \omega t$ unifies time evolution with rotation in the complex plane. A state evolves as:
+\[
+z(t) = r e^{i\omega t}.
+\]
+
+The observable projection oscillates:
+\[
+m(t) = r\cos(\omega t),
+\]
+explaining wave-like behavior from the geometry of rotation.
+
+\subsection{Energy-frequency connection}
+
+From quantum mechanics:
+\[
+E = \hbar\omega \quad \Rightarrow \quad \omega = \frac{E}{\hbar}.
+\]
+
+Thus the rotation rate in the complex plane is proportional to energy, linking dynamics to the imaginary component.
+
+\subsection{Measurement and collapse}
+
+In standard quantum mechanics, measurement "collapses" the wavefunction. In the EMTS framework:
+\begin{enumerate}
+\item Before measurement: Full state is $z = m + iE$ with complex dynamics
+\item Measurement: Projects to $\Re(z) = m$
+\item After measurement: The imaginary component $E$ remains but is decohered from the observable $m$
+\end{enumerate}
+
+Multiple branches with different $E$ values persist along the imaginary axis (see Chapter~\ref{ch:mapping-reality} for the multiverse interpretation).
+
+\section{Force quadrants}
+\label{sec:force-quadrants}
+
+The complex plane is divided into four quadrants based on the sign of $m$ and $E$. We hypothesize that fundamental forces correspond to phase windows:
+
+\begin{center}
+\begin{tabular}{clcc}
+\hline
+\textbf{Quadrant} & \textbf{Force} & \textbf{Phase Range} & \textbf{Symbol} \\
+\hline
+I & Electromagnetic & $0 < \theta < \frac{\pi}{2}$ & \quadEM \\
+II & Weak & $\frac{\pi}{2} < \theta < \pi$ & \quadWeak \\
+III & Strong & $\pi < \theta < \frac{3\pi}{2}$ & \quadStrong \\
+IV & Gravitational & $\frac{3\pi}{2} < \theta < 2\pi$ & \quadGrav \\
+\hline
+\end{tabular}
+\end{center}
+
+Each force is characterized by a phase window $W_f(\theta)$ and coupling function $g_f(\theta, r)$. The observed interaction strength depends on where the state $z(t)$ resides in the phase cycle (see Chapter~\ref{ch:fundamental-forces} for details).
+
+\section{Notation conventions}
+
+Throughout this work, we use the following notation:
+
+\begin{itemize}
+\item $z = m + iE = r e^{i\theta}$ — Complex state (canonical form: $\EMTSz$)
+\item $\theta = \omega t$ — Phase-time relation (shorthand: $\phaseTime$)
+\item $r = |z|$ — Modulus (total mass-energy)
+\item $\Re(z) = r\cos\theta = \projReal$ — Real projection (observable)
+\item $\Psi(z, t)$ or $\Psi(r, \theta)$ — Wavefunction on complex state space
+\item $Q_{\text{I}}, Q_{\text{II}}, Q_{\text{III}}, Q_{\text{IV}}$ — Force quadrants (EM, Weak, Strong, Gravitational)
+\end{itemize}
+
+\section{Relationship to standard physics}
+
+The EMTS framework is not a replacement for quantum mechanics or relativity, but a \emph{geometric reinterpretation} that:
+
+\begin{itemize}
+\item Recovers the Schrödinger equation in appropriate limits
+\item Naturally incorporates special relativity through $r = \sqrt{m^2 + E^2}$
+\item Provides a unified language for discussing particles, forces, and spacetime
+\item Suggests extensions (e.g., multiverse structure, dark matter) that emerge from the geometry
+\end{itemize}
+
+Standard formulations are recovered by:
+\begin{enumerate}
+\item Restricting to the real axis (classical limit)
+\item Quantizing the phase $\theta$ (quantum mechanics)
+\item Coupling the modulus $r$ to spacetime curvature (general relativity)
+\end{enumerate}
+
+\section{Summary: The EMTS postulates}
+
+We summarize the core framework:
+
+\begin{enumerate}
+\item \textbf{Complex representation}: Physical states are complex numbers $z = m + iE$
+\item \textbf{Polar dynamics}: States evolve as $z(t) = r e^{i\omega t}$ with $\omega = E/\hbar$
+\item \textbf{Projection principle}: Observable reality is $\Re(z)$; imaginary components are hidden
+\item \textbf{Phase-force mapping}: Forces correspond to phase windows in $[0, 2\pi)$
+\item \textbf{Quantization}: Periodicity in $\theta$ leads to discrete spectra
+\item \textbf{Dimensionality from precision}: Effective dimensionality increases with measurement precision
+\end{enumerate}
+
+The remaining chapters develop these postulates in detail, exploring their implications for quantum mechanics (Part I), the Standard Model (Part II), specific phenomena (Part III), and future directions (Part IV).
