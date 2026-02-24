@@ -66,21 +66,78 @@ This projection is \textbf{many-to-one}: infinitely many complex states
 \]
 all project to the same observable value $m$. The imaginary component $E$ represents hidden degrees of freedom that influence dynamics but are not directly observed.
 
+\paragraph{Before collapse: a two-dimensional world.}
+Prior to any projection the full state is the complex number $z = re^{i\theta}$, described by exactly
+two real parameters --- the spatial scale $r$ and the time-phase $\theta$. The pre-collapse world
+is intrinsically \emph{two-dimensional}; no additional spatial coordinates exist at this level.
+
+\paragraph{Collapse creates dimensionality.}
+A single projection event $z \to \Re(z) = r\cos\theta$ yields one real number: a point on a line.
+But an observer is built from \emph{many} projections of \emph{many} independent states. Each
+projection event pins down one real value along one independent degree of freedom. When enough
+independent projections accumulate, the observer can \emph{triangulate}: three independent
+real-axis readouts suffice to locate an event in everyday experience, which is why space appears
+three-dimensional. More precisely:
+\begin{itemize}
+  \item $D = 1$ independent projection: a point on a line.
+  \item $D = 3$ independent projections: a point in space --- the familiar 3D world.
+  \item $D = N$ independent projections: an effective $N$-dimensional space, accessible in principle
+        to a sufficiently rich measuring apparatus (Chapter~\ref{ch:mapping-reality}).
+\end{itemize}
+Three-dimensional space is therefore not a pre-existing container. It is the \emph{minimum number of
+independent real-axis readouts} required to locate matter, and its value $D=3$ is an empirical fact
+about which degrees of freedom decohere at macroscopic energy scales. Crucially, this argument applies
+only to \emph{particle-like} observers --- those who interact with the world through localised
+projection events. A wave-like observer, one that never forces a collapse, would have no projection
+events from which to assemble spatial coordinates and would perceive the world as inherently
+two-dimensional (see Section~\ref{sec:wave-universe-dimensionality}).
+
 \section{Fundamental relationships}
 \label{sec:fundamental-relations}
 
 \subsection{Time as phase}
+\label{sec:time-as-phase}
 
 The identification $\theta = \omega t$ unifies time evolution with rotation in the complex plane. A state evolves as:
 \[
-z(t) = r e^{i\omega t}.
+z(t) = r e^{i\omega t},
 \]
-
-The observable projection oscillates:
+and the observable projection oscillates:
 \[
 m(t) = r\cos(\omega t),
 \]
-explaining wave-like behavior from the geometry of rotation.
+explaining wave-like behaviour from the geometry of rotation.
+
+The argument $\theta = \omega t$ is the natural time variable of the EMTS framework, but it carries a
+dual character that distinguishes it from the ordinary parameter $t$:
+
+\paragraph{Monotonic growth — the arrow of time.}
+As $t$ advances, $\theta = \omega t$ increases without bound: $\theta \in (-\infty, +\infty)$.  This
+unbounded growth is the EMTS expression of the \emph{arrow of time}.  No two physically distinct moments
+have the same $\theta$ on the universal timeline; the total accumulated phase is an ever-increasing record
+of elapsed history.  In this sense $\theta$ is a richer time variable than $t$ itself: it carries
+both the elapsed duration (via its magnitude) and the current energy scale (via $\omega = E/\hbar$, so
+higher-energy states evolve faster).
+
+\paragraph{Cyclic behaviour — the wave nature of matter.}
+Although $\theta$ grows without limit, its effect on the physical state is $2\pi$-periodic:
+\[
+z(\theta + 2\pi) = r e^{i(\theta + 2\pi)} = r e^{i\theta} = z(\theta).
+\]
+The observable projection $m = r\cos\theta$ recurs with period $2\pi$ in $\theta$, or equivalently with
+period $T = 2\pi/\omega$ in $t$.  This periodicity is the geometric origin of \emph{wave-like behaviour}:
+a particle is not oscillating because something is vibrating in ordinary space, but because the EMTS phase
+angle is cycling through the same projection values repeatedly.  The wave is the shadow of a rotation.
+
+The two aspects together give $\theta$ its full physical meaning:
+\begin{itemize}
+  \item The \textbf{unwrapped} $\theta \in \mathbb{R}$ encodes absolute time and energy history.
+  \item The \textbf{wrapped} $\theta \bmod 2\pi \in [0, 2\pi)$ encodes the instantaneous
+        mass-energy partition and the force quadrant (Section~\ref{sec:force-quadrants}).
+\end{itemize}
+Quantization arises precisely from demanding single-valuedness of the wavefunction under the cyclic
+part: $\Psi(r, \theta + 2\pi) = \Psi(r, \theta)$ forces integer winding numbers $n$, giving discrete
+energy spectra $E_n = n\hbar\omega$.
 
 \subsection{Energy-frequency connection}
 
@@ -88,8 +145,98 @@ From quantum mechanics:
 \[
 E = \hbar\omega \quad \Rightarrow \quad \omega = \frac{E}{\hbar}.
 \]
+Thus the rotation rate in the complex plane is proportional to energy: a more energetic state rotates
+faster, ages faster in phase, and has a shorter period $T = h/E$.  The time variable $\theta$ is
+therefore not universal — it runs at a rate set by the energy of each individual state.
 
-Thus the rotation rate in the complex plane is proportional to energy, linking dynamics to the imaginary component.
+\subsection{Space as modulus}
+\label{sec:space-as-modulus}
+
+While $\theta$ encodes time, the modulus $r$ encodes \emph{space} — specifically, the accessible spatial
+scale of the state.  This identification rests on three interlocking arguments.
+
+\paragraph{1. De Broglie wavelength.}
+For a particle with momentum $p$, the de Broglie relation gives a spatial wavelength
+\[
+  \lambda = \frac{h}{p} = \frac{2\pi\hbar}{p}.
+\]
+In the EMTS complex plane, when kinetic energy is included the total relativistic energy is
+$E_{\rm tot} = \sqrt{p^2 c^2 + m^2 c^4}$, so the EMTS modulus becomes
+\[
+  r = \frac{1}{c}\sqrt{(pc)^2 + (mc^2)^2} = \frac{|p^\mu|}{c},
+\]
+the magnitude of the 4-momentum divided by $c$.  Since $r \propto p \propto 1/\lambda$, a larger
+modulus corresponds to a \emph{shorter wavelength} — finer spatial resolution.  Conversely, a small
+$r$ (non-relativistic, nearly-at-rest state) corresponds to a large spatial wavelength: the state is
+spread over a large region.  The modulus $r$ is therefore an \emph{inverse spatial scale}: it
+measures how well the state is localised in space.
+
+\paragraph{2. Compton wavelength and rest mass.}
+At rest ($p = 0$), all of the modulus comes from the rest mass: $r = mc$.  The corresponding spatial
+scale is the Compton wavelength
+\[
+  \lambda_C = \frac{\hbar}{mc} = \frac{\hbar}{r}.
+\]
+The Compton wavelength is the minimum spatial extent of a particle; below it, quantum field
+creation-and-annihilation processes dominate and the single-particle description breaks down.  A particle
+with larger $r$ (larger rest mass) has a smaller Compton wavelength and is more spatially localised — it
+occupies a smaller region of space.  The modulus thus sets the \emph{characteristic spatial size} of
+the state.
+
+\paragraph{3. Curvature and gravitational radius.}
+In general relativity, the Schwarzschild radius of a body with mass-energy $r$ (in natural units)
+is
+\[
+  r_s = \frac{2G_N r}{c^4}.
+\]
+Larger $r$ curves spacetime more strongly, creating a larger gravitational well — a larger region of
+space dominated by that body's field.  The modulus therefore couples directly to the geometry of space:
+it controls the spatial extent of the gravitational influence.
+
+\paragraph{$r$ before vs.\ after collapse.}
+A crucial distinction separates the role of $r$ on each side of a projection event:
+\begin{itemize}
+  \item \textbf{Before collapse:} $r$ is a single scalar --- the mass-energy magnitude. It sets a
+        \emph{characteristic spatial scale} (Compton wavelength, gravitational reach), but it is
+        not a coordinate. The pre-collapse state lives in the 2D plane $(r,\theta)$; there is no
+        ``$x$-direction'' or ``$y$-direction'' at this level.
+  \item \textbf{After collapse:} each projection event $z_k \to r_k\cos\theta_k$ contributes one
+        real number to the observer's record. A collection of $D$ independent such records
+        \emph{assembles} a $D$-dimensional coordinate space.
+\end{itemize}
+The logical chain is:
+\[
+  \underbrace{z = re^{i\theta}}_{\text{pre-collapse (2D)}}
+  \;\xrightarrow{\text{one collapse}}
+  \underbrace{r\cos\theta\in\mathbb{R}}_{\text{one real value (1D)}}
+  \;\xrightarrow{D\text{ independent collapses}}
+  \underbrace{(x_1,\dots,x_D)\in\mathbb{R}^D}_{\text{emergent }D\text{D space.}}
+\]
+The $D=3$ of everyday experience is not written into EMTS by hand; it is the observed count of
+independent mass-like degrees of freedom that decohere at macroscopic energy scales. Before any collapse
+$r$ is merely a scalar scale, not a spatial coordinate; the full $D$-dimensional spatial arena only
+crystallises through repeated projection. A purely wave-driven system --- one described by $(r,\theta)$
+but never collapsed --- inhabits a 2D world without spatial extent in the particle sense
+(Section~\ref{sec:wave-universe-dimensionality}).
+
+\paragraph{Summary of the space-time duality.}
+Putting the two identifications together:
+
+\begin{center}
+\begin{tabular}{lll}
+\hline
+\textbf{Polar coordinate} & \textbf{Physical meaning} & \textbf{Character} \\
+\hline
+$r = |z|$ & Spatial scale (inverse wavelength, Compton size, curvature) & Static; non-negative; sets the arena \\
+$\theta = \omega t$ & Time (monotonically growing, but $2\pi$-periodic effect) & Dynamic; unbounded; drives evolution \\
+\hline
+\end{tabular}
+\end{center}
+
+A physical event is therefore fully characterised by a single complex number $z = r e^{i\theta}$:
+$r$ says \emph{where} (at what spatial scale) and $\theta$ says \emph{when} (at what phase of the
+evolution).  This is the EMTS replacement for the separate $(x, t)$ coordinates of Newtonian
+mechanics — compressed into the magnitude and argument of a single complex amplitude.
 
 \subsection{Measurement and collapse}
 
@@ -128,9 +275,9 @@ Throughout this work, we use the following notation:
 
 \begin{itemize}
 \item $z = m + iE = r e^{i\theta}$ — Complex state (canonical form: $\EMTSz$)
-\item $\theta = \omega t$ — Phase-time relation (shorthand: $\phaseTime$)
-\item $r = |z|$ — Modulus (total mass-energy)
-\item $\Re(z) = r\cos\theta = \projReal$ — Real projection (observable)
+\item $\theta = \omega t$ — Phase-time (unwrapped $\in\mathbb{R}$; cyclic mod $2\pi$; shorthand: $\phaseTime$)
+\item $r = |z| = \sqrt{m^2+E^2}$ — Modulus: spatial scale / inverse wavelength (shorthand: $r$)
+\item $\Re(z) = r\cos\theta = \projReal$ — Real projection (observable mass)
 \item $\Psi(z, t)$ or $\Psi(r, \theta)$ — Wavefunction on complex state space
 \item $Q_{\text{I}}, Q_{\text{II}}, Q_{\text{III}}, Q_{\text{IV}}$ — Force quadrants (EM, Weak, Strong, Gravitational)
 \end{itemize}
@@ -158,12 +305,22 @@ Standard formulations are recovered by:
 We summarize the core framework:
 
 \begin{enumerate}
-\item \textbf{Complex representation}: Physical states are complex numbers $z = m + iE$
-\item \textbf{Polar dynamics}: States evolve as $z(t) = r e^{i\omega t}$ with $\omega = E/\hbar$
-\item \textbf{Projection principle}: Observable reality is $\Re(z)$; imaginary components are hidden
-\item \textbf{Phase-force mapping}: Forces correspond to phase windows in $[0, 2\pi)$
-\item \textbf{Quantization}: Periodicity in $\theta$ leads to discrete spectra
-\item \textbf{Dimensionality from precision}: Effective dimensionality increases with measurement precision
+\item \textbf{Complex representation}: Physical states are complex numbers $z = m + iE$.
+\item \textbf{Space as modulus}: The modulus $r = |z|$ encodes the spatial scale of the state
+      (inverse de~Broglie wavelength, Compton size, gravitational reach).
+      See Section~\ref{sec:space-as-modulus}.
+\item \textbf{Time as phase}: The argument $\theta = \omega t$ encodes time.  It grows
+      \emph{monotonically} (arrow of time) but acts \emph{cyclically} modulo $2\pi$ (wave
+      nature of matter).  See Section~\ref{sec:time-as-phase}.
+\item \textbf{Polar dynamics}: States evolve as $z(t) = r e^{i\omega t}$ with $\omega = E/\hbar$.
+\item \textbf{Projection principle}: Observable reality is $\Re(z) = r\cos\theta$;
+      imaginary components are hidden but dynamically active.
+\item \textbf{Phase-force mapping}: Force channel is tagged by the quadrant of
+      $\theta \bmod 2\pi$.
+\item \textbf{Quantization}: Single-valuedness under $\theta \to \theta + 2\pi$ forces
+      integer winding numbers and discrete spectra.
+\item \textbf{Dimensionality from precision}: Effective spatial dimensionality increases with
+      measurement precision (Chapter~\ref{ch:mapping-reality}).
 \end{enumerate}
 
 The remaining chapters develop these postulates in detail, exploring their implications for quantum mechanics (Part I), the Standard Model (Part II), specific phenomena (Part III), and future directions (Part IV).
