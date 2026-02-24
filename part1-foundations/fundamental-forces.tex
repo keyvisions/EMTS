@@ -1,16 +1,658 @@
 \chapter{The Quadrants and Their Implications}
 \label{ch:fundamental-forces}
 
-Let the pre-measurement state be $z(t_0)=r e^{i\theta_0}$. A projection onto the real axis yields $m_z=\projReal$. Hypothesis: the interaction channel observed in spacetime is tagged by the pre-collapse quadrant of $z(t_0)$.
+The EMTS framework assigns a physical meaning not just to the magnitude $r$ and the phase $\theta$
+of the complex state $\EMTSz$, but to the \emph{quadrant} in which the state resides at the moment
+of interaction. The central hypothesis of this chapter is:
+
+\begin{quote}
+\textbf{Force-tagging postulate.}
+The interaction channel observed in spacetime is tagged by the quadrant of the pre-collapse state
+$z(t_0) = r e^{i\theta_0}$. Each of the four fundamental forces is the dominant interaction mode
+for states residing in the corresponding quarter of the complex $m$--$E$ plane.
+\end{quote}
+
+This is not merely a labelling convenience. The signs of $m=r\cos\theta_0$ and $E=r\sin\theta_0$
+encode qualitatively different physical regimes—positive vs.\ negative effective mass, absorptive
+vs.\ emissive energy—and each regime selects a different symmetry group and mediating boson family.
+
+% -----------------------------------------------------------------------
+\section{Phase Windows as Hermitian Projectors}
+\label{sec:phase-windows}
+% -----------------------------------------------------------------------
+
+The mathematical object that carves out a quadrant is a \textbf{phase-window projector}.
+Define the indicator function for force $f$:
+\[
+  W_f(\theta)
+  = \begin{cases}
+    1, & \theta \in \Delta_f, \\
+    0, & \text{otherwise,}
+  \end{cases}
+\]
+where $\Delta_f$ is the phase interval assigned to force $f$ (Table~\ref{tab:force-quadrants}).
+A smooth, physical version replaces the step function with a squared cosine bell
+\[
+  \tilde{W}_f(\theta)
+  = \cos^2\!\left(\frac{\theta - \theta_f^{\rm mid}}{\Delta\theta_f}\,\frac{\pi}{2}\right)
+    \cdot \mathbf{1}_{\theta\in\Delta_f}
+\]
+that tapers to zero at the quadrant boundaries, avoiding divergences in the coupling
+integral. Coupling strength at scale $r$ is then the cycle average
+\[
+  \bar{g}_f(r)
+  = \frac{\omega(r)}{2\pi}
+    \int_0^{2\pi} W_f(\theta)\,g_f(\theta, r)\,d\theta,
+\]
+where $g_f(\theta, r)$ is a force-specific coupling function discussed in each subsection
+below. In the Hilbert-space language of Chapter~\ref{ch:hermitian-operators}, $W_f$
+acts as a Hermitian projector onto the subspace of states whose phase lies in $\Delta_f$,
+and $\bar{g}_f$ is the expectation value of the coupling operator in that subspace.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{clcccc}
+\hline
+\textbf{Quadrant} & \textbf{Force} & \textbf{Phase window $\Delta_f$} & $\text{sgn}(m)$ & $\text{sgn}(E)$ & \textbf{Mediator} \\
+\hline
+\quadEM           & Electromagnetic & $\left(0,\;\tfrac{\pi}{2}\right)$             & $+$ & $+$ & Photon $\gamma$ \\
+\quadWeak         & Weak nuclear    & $\left(\tfrac{\pi}{2},\;\pi\right)$           & $-$ & $+$ & $W^\pm,\;Z^0$ \\
+\quadStrong       & Strong nuclear  & $\left(\pi,\;\tfrac{3\pi}{2}\right)$          & $-$ & $-$ & Gluons $g$ \\
+\quadGrav         & Gravitational   & $\left(\tfrac{3\pi}{2},\;2\pi\right)$         & $+$ & $-$ & Graviton $G$ \\
+\hline
+\end{tabular}
+\caption{Assignment of fundamental forces to phase quadrants of the EMTS complex plane.
+The signs of the real projection $m=r\cos\theta$ and imaginary component $E=r\sin\theta$
+characterise each regime.}
+\label{tab:force-quadrants}
+\end{table}
+
+% -----------------------------------------------------------------------
+\section{Quadrant I — Electromagnetic Force}
+\label{sec:quadrant-em}
+% -----------------------------------------------------------------------
+
+\textbf{Phase window:} $\theta \in \left(0,\tfrac{\pi}{2}\right)$, \quad
+$m = r\cos\theta > 0$, \quad $E = r\sin\theta > 0$.
+
+In \quadEM\ the system possesses \emph{positive real mass and positive energy}. This is
+the most familiar physical regime: a massive, energetic particle propagating with a
+well-defined positive rest mass.
+
+\subsection*{Physical character}
+
+The electromagnetic force is mediated by the massless photon, which corresponds to the
+\emph{boundary} $\theta = \pi/2$ of \quadEM—the pure-imaginary axis where $m = 0$ and
+the state carries only energy. Because the mediator lives on the quadrant boundary, the
+force is infinite-ranged: the photon can transport energy $E = \hbar\omega$ across
+arbitrarily large distances without a mass penalty.
+
+Within \quadEM, the coupling function is approximately
+\[
+  g_{\rm EM}(\theta, r) \approx \frac{\alpha}{r}\,\cos^2\theta,
+  \qquad
+  \alpha \approx \frac{1}{137},
+\]
+where $\alpha$ is the fine-structure constant. The $\cos^2\theta$ factor reflects the
+projection principle: only the mass component $m/r = \cos\theta$ couples to the
+electromagnetic field. Purely energetic states ($\theta \to \pi/2$) carry less charge
+and interact more weakly, while purely massive states ($\theta \to 0$) couple most
+strongly.
+
+\subsection*{Symmetry in EMTS}
+
+The gauge symmetry of electromagnetism, $U(1)$, corresponds to a global phase shift
+$\theta \mapsto \theta + \alpha$ that leaves $r$ unchanged. In the Hilbert-space
+representation this is the unitary operator
+$U(\alpha) = e^{i\alpha\hat{N}}$,
+where $\hat{N} = \lvert E\rangle\langle E\rvert - \lvert m\rangle\langle m\rvert$
+counts the energy-to-mass imbalance. Electromagnetic interactions are thus phase
+rotations that keep the system within (or near) \quadEM.
+
+% -----------------------------------------------------------------------
+\section{Quadrant II — Weak Nuclear Force}
+\label{sec:quadrant-weak}
+% -----------------------------------------------------------------------
+
+\textbf{Phase window:} $\theta \in \left(\tfrac{\pi}{2}, \pi\right)$, \quad
+$m = r\cos\theta < 0$, \quad $E = r\sin\theta > 0$.
+
+In \quadWeak\ the real projection $m$ is \emph{negative} while the energy component
+remains positive. Negative $m$ does not imply a physical anti-particle; rather, it signals
+that the state has crossed the pure-energy axis and the observable on the real axis now
+points in the negative direction—it is an \emph{inverted mass configuration}.
+
+\subsection*{Physical character}
+
+The weak force is mediated by the massive $W^\pm$ and $Z^0$ bosons. Their masses
+($m_W \approx 80\;\text{GeV}$, $m_Z \approx 91\;\text{GeV}$) arise because the mediators
+\emph{must} cross from the \quadWeak\ regime back toward the real axis to transmit the
+interaction, paying a mass penalty encoded by the crossing distance $|\theta - \pi/2|$.
+This gives the weak force its characteristically short range,
+\[
+  \lambda_{\rm weak} \sim \frac{\hbar c}{m_W c^2} \approx 2 \times 10^{-18}\;\text{m}.
+\]
+
+\subsection*{Flavour mixing and the EMTS picture}
+
+A hallmark of the weak force is \textbf{flavour mixing}: it transforms one quark or
+lepton flavour into another. In EMTS terms, a weak interaction shifts the phase $\theta$
+discontinuously across the \quadEM--\quadWeak\ boundary ($\theta = \pi/2$), moving the
+state from a positive-mass to a negative-mass configuration and back. This boundary
+transition corresponds to a \emph{parity flip} ($m \to -m$), naturally explaining why
+the weak force is the only interaction that violates parity ($P$) symmetry—it is the
+only force whose mediator must cross the imaginary axis.
+
+The coupling function is approximately
+\[
+  g_{\rm W}(\theta, r) \approx \frac{g_2^2}{r}\,e^{-m_W r/\hbar c}\,|\cos\theta|,
+\]
+where $g_2$ is the weak coupling constant and the exponential Yukawa suppression
+reflects the massive mediator.
+
+% -----------------------------------------------------------------------
+\section{Quadrant III — Strong Nuclear Force}
+\label{sec:quadrant-strong}
+% -----------------------------------------------------------------------
+
+\textbf{Phase window:} $\theta \in \left(\pi, \tfrac{3\pi}{2}\right)$, \quad
+$m = r\cos\theta < 0$, \quad $E = r\sin\theta < 0$.
+
+\quadStrong\ is the only quadrant where \emph{both} components are negative. This
+doubly-inverted regime corresponds to states deep inside nuclear scales, where both the
+observable mass projection and the energy carrying capacity point opposite to the
+macroscopic conventions.
+
+\subsection*{Physical character}
+
+The strong force is mediated by eight massless gluons and governs quark confinement.
+Its key distinguishing feature is \textbf{asymptotic freedom} and \textbf{confinement}:
 
 \begin{itemize}
-  \item Quadrant I (\quadEM, $0<\theta_0<\tfrac{\pi}{2}$): Electromagnetic
-  \item Quadrant II (\quadWeak, $\tfrac{\pi}{2}<\theta_0<\pi$): Weak
-  \item Quadrant III (\quadStrong, $\pi<\theta_0<\tfrac{3\pi}{2}$): Strong
-  \item Quadrant IV (\quadGrav, $\tfrac{3\pi}{2}<\theta_0<2\pi$): Gravitational
+  \item \textbf{Asymptotic freedom} ($r \to 0$): At short distances the coupling weakens.
+        In EMTS, small $r$ means the state has low modulus (low mass-energy), and both
+        negative components are small in magnitude—the state barely occupies \quadStrong\ and
+        couples weakly.
+  \item \textbf{Confinement} ($r \to \infty$): As $r$ grows, states deep in \quadStrong\
+        cannot close their EMTS orbit into a real projection. The coupling grows linearly:
+        \[
+          g_{\rm S}(\theta, r) \approx \alpha_s(r)\,r,
+          \qquad
+          \alpha_s(r) \sim \frac{1}{\ln(r_0/r)},
+        \]
+        producing a flux tube of rising potential that prevents isolated quarks from
+        appearing as free observable particles.
 \end{itemize}
 
-With phase windows $W_f(\theta)$ and coupling $g(\theta,r)$, a cycle-averaged strength at radius $r$ is
+\subsection*{Colour charge and SU(3)}
+
+The three colour charges (red, green, blue) correspond to three independent phase
+orientations within \quadStrong, each separated by $2\pi/3$. Only colour-neutral
+combinations—states whose joint phase averages to $\pi$ (the midpoint of \quadStrong, i.e.,
+on the negative real axis)—produce closed EMTS orbits that project to a real, observable
+hadron. This is the EMTS geometric interpretation of $SU(3)$ colour neutrality.
+
+% -----------------------------------------------------------------------
+\section{Quadrant IV — Gravitational Force}
+\label{sec:quadrant-grav}
+% -----------------------------------------------------------------------
+
+\textbf{Phase window:} $\theta \in \left(\tfrac{3\pi}{2}, 2\pi\right)$, \quad
+$m = r\cos\theta > 0$, \quad $E = r\sin\theta < 0$.
+
+In \quadGrav\ the mass projection is again positive—as in \quadEM—but the energy
+component is \emph{negative}. A negative imaginary component means the state is
+decelerating, emitting energy, or losing phase coherence: the hallmarks of
+gravitational attraction and energy dissipation.
+
+\subsection*{Physical character}
+
+Gravity is the weakest force at particle scales but the only one that is always
+attractive and infinite-ranged. Its mediator, the graviton $G$, is conjectured to be
+massless (like the photon), and it lives on the \quadGrav--\quadEM\ boundary at
+$\theta = 0$ (or equivalently $2\pi$)—the positive real axis, where pure mass and zero
+energy meet.
+
+The coupling function is
 \[
-\bar g_f(r)=\frac{\omega(r)}{2\pi}\int_0^{2\pi} W_f(\theta)\,g(\theta,r)\,d\theta.
+  g_{\rm G}(\theta, r) \approx \frac{G_N\,r^2}{r_{\rm P}^2}\,\cos^2\theta,
+  \qquad
+  r_{\rm P} = \sqrt{\frac{\hbar G_N}{c^3}} \approx 1.6 \times 10^{-35}\;\text{m},
 \]
+where $G_N$ is Newton's constant and $r_{\rm P}$ is the Planck length. The $\cos^2\theta$
+factor is the same as in electromagnetism—both forces couple to the mass projection—but
+the scale factor $r^2/r_{\rm P}^2$ suppresses gravity enormously at sub-Planckian
+radii, explaining the hierarchy problem geometrically: gravity is weak because the
+Planck length is tiny compared to every other scale in the theory.
+
+\subsection*{Always attractive}
+
+In \quadGrav\ we have $E < 0$, meaning the state is losing energy to the field. Since
+the force is proportional to $-\partial g_{\rm G}/\partial r \propto -G_N m_1 m_2/r^2$
+(always negative, i.e., attractive), gravity never repels. There is no quadrant
+analogous to the electromagnetic case where $E > 0$ states could push back, so the
+force has no repulsive branch. This geometric asymmetry between \quadEM\ and \quadGrav\
+is the EMTS explanation for why gravity cannot be screened.
+
+% -----------------------------------------------------------------------
+\section{Boundary Axes as Transition Zones}
+\label{sec:boundary-axes}
+% -----------------------------------------------------------------------
+
+The four quadrant boundaries (the coordinate axes of the $m$--$E$ plane) are
+physically significant in their own right:
+
+\begin{center}
+\begin{tabular}{clll}
+\hline
+\textbf{Axis} & \textbf{Condition} & \textbf{State type} & \textbf{Physical role} \\
+\hline
+$\theta = 0$        & $m > 0,\;E = 0$ & Pure mass (rest)    & Classical matter; graviton pole \\
+$\theta = \pi/2$    & $m = 0,\;E > 0$ & Pure energy         & Massless bosons; photon pole \\
+$\theta = \pi$      & $m < 0,\;E = 0$ & Anti-mass           & Antimatter boundary; $CP$ axis \\
+$\theta = 3\pi/2$   & $m = 0,\;E < 0$ & Negative energy     & Vacuum fluctuations; Casimir states \\
+\hline
+\end{tabular}
+\end{center}
+
+States sitting exactly on an axis are eigenstates of either $\hat{M}$ or $\hat{E}_{\rm
+obs}$ (Chapter~\ref{ch:hermitian-operators}), and the axes themselves act as
+\emph{force-transition interfaces}. A particle undergoing a phase transition from one
+quadrant to another must necessarily pass through one of these axes, which is why
+interactions at the quadrant boundaries are associated with the emission or absorption
+of the corresponding massless (boundary-resident) mediator.
+
+% -----------------------------------------------------------------------
+\section{Force Hierarchy from Phase Geometry}
+\label{sec:force-hierarchy}
+% -----------------------------------------------------------------------
+
+A qualitative but illuminating observation emerges when the four cycle-averaged coupling
+strengths are compared as a function of $r$. Each $\bar{g}_f(r)$ inherits a different
+$r$-dependence from the structure of its quadrant:
+
+\begin{center}
+\begin{tabular}{lll}
+\hline
+\textbf{Force} & $r$-scaling of $\bar{g}_f$ & \textbf{Observed range} \\
+\hline
+Strong         & $\sim \alpha_s(r)\cdot r$  & $\lesssim 10^{-15}$ m (grows then confines) \\
+Electromagnetic& $\sim \alpha / r$          & $\infty$ (power-law) \\
+Weak           & $\sim g_2^2 e^{-m_W r}/r$ & $\sim 10^{-18}$ m (Yukawa) \\
+Gravitational  & $\sim G_N r^2/r_{\rm P}^2$& $\infty$ (power-law, tiny $G_N$) \\
+\hline
+\end{tabular}
+\end{center}
+
+At the scale of everyday matter ($r \sim r_{\rm Bohr} \approx 0.5\;\text{\AA}$), the
+hierarchy $\alpha_s \gg \alpha \gg g_2^2 e^{-m_W r} \gg G_N/r_{\rm P}^2 r^{-2}$ is
+entirely consistent with the standard measured values. The EMTS quadrant model does not
+derive these numerical values from first principles, but it \emph{organises} them into a
+coherent geometric structure: forces become arrayed in the complex plane not by
+coincidence but because each quadrant imposes different sign constraints and range
+behaviours on the coupling integral.
+
+% -----------------------------------------------------------------------
+\section{Is the Four-Fold Coincidence Real?}
+\label{sec:four-fold}
+% -----------------------------------------------------------------------
+
+A natural—and important—question arises at this point:
+
+\begin{quote}
+\emph{Is it a coincidence that there are four fundamental forces and four quadrants?}
+\end{quote}
+
+The short answer, within the EMTS framework, is \textbf{no}. But the reasoning deserves
+care, because the same count "four'' carries different epistemic weights on each side of
+the equation.
+
+\subsection*{Why four quadrants is inevitable}
+
+The complex plane $\mathbb{C}$ has two real coordinates, $m$ and $E$, each of which
+can be positive or negative. The number of sign combinations is
+\[
+  |\{+,-\}|^2 = 2^2 = 4.
+\]
+This is not a hypothesis about physics—it is an arithmetic fact about the dimensionality
+of the representation space. Given the EMTS postulate that physical states are complex
+numbers $z = m + iE$, \emph{there could not be any other number of quadrants}.
+
+More formally, the symmetry group that permutes sign combinations is the Klein four-group
+$V_4 \cong \mathbb{Z}_2 \times \mathbb{Z}_2$, generated by the two independent reflections
+\[
+  \sigma_m : m \mapsto -m \quad (\text{mass parity}),
+  \qquad
+  \sigma_E : E \mapsto -E \quad (\text{energy parity}).
+\]
+The four quadrants are exactly the four orbits of $V_4$ acting on the non-zero points of
+$\mathbb{C}\setminus\{0\}$. Any two-dimensional real representation of a physical state
+will have this fourfold orbit structure.
+
+\subsection*{Why four forces is \emph{not} fundamental}
+
+From the standard-physics side, the count "four'' is historically and energetically
+contingent:
+
+\begin{itemize}
+  \item \textbf{Electroweak unification} (Glashow--Salam--Weinberg, 1960s--70s): at
+        energies above $\sim 100\;\text{GeV}$ the electromagnetic and weak forces merge
+        into a single $SU(2)_L \times U(1)_Y$ interaction. The apparent split into two
+        forces at low energies arises from spontaneous symmetry breaking (the Higgs
+        mechanism), which gives the $W^\pm$ and $Z^0$ bosons their masses and leaves the
+        photon massless. If one works above the electroweak scale, there are effectively
+        \emph{three} forces, not four.
+  \item \textbf{Grand Unified Theories (GUTs)} predict a further merger of the
+        electroweak and strong forces into a single $SU(5)$ (or larger) gauge group at
+        energies $\sim 10^{15}\;\text{GeV}$, reducing the count to \emph{two}: a single
+        unified force plus gravity.
+  \item \textbf{String/M-theory} candidates suggest all four may be facets of a single
+        eleven-dimensional geometric structure, making the count \emph{one}.
+\end{itemize}
+
+So the number four is a low-energy, broken-symmetry artefact of the Standard Model, not
+a Platonic constant of nature.
+
+\subsection*{The EMTS interpretation}
+
+Putting both sides together, the EMTS perspective is the following:
+
+\begin{enumerate}
+  \item The complex plane \emph{necessarily} produces exactly four sign-distinct regimes.
+  \item Nature at low energies \emph{empirically} exhibits four dominant interaction
+        channels.
+  \item The EMTS framework is a mapping of the low-energy effective theory: it assigns
+        each empirically observed force to the quadrant whose sign structure best matches
+        the force's qualitative properties (range, attractive vs.\ repulsive, mass-dependent
+        vs.\ charge-dependent coupling).
+\end{enumerate}
+
+The match between four quadrants and four forces is therefore a \emph{necessary}
+consequence of EMTS applied to the low-energy Standard Model, not a numerical
+coincidence. The deeper question—whether the fourfold structure of the complex plane is
+the \emph{reason} nature exhibits (approximately) four forces at low energies, or merely
+a convenient coordinate system for describing them—remains a topic of ongoing
+investigation in the theoretical framework.
+
+\subsection*{Higher-energy modifications}
+
+If the electroweak unification is taken seriously within EMTS, then above the
+electroweak scale the \quadEM\ and \quadWeak\ quadrants must \emph{merge}. This would
+correspond to the phase boundary at $\theta = \pi/2$ becoming dynamical: the imaginary
+axis ceases to be a sharp dividing wall between EM and Weak regimes and instead becomes
+a transition band of width $\sim \hbar/m_W c$ that widens as energy increases. At GUT
+scales, three quadrants merge further, and one would work with an effective single-quadrant
+covering almost the entire upper half-plane
+$\{\theta \in (0, \pi)\}$. The geometrical language survives high-energy unification; only
+the sharpness of the quadrant boundaries changes.
+
+% -----------------------------------------------------------------------
+\section{Quadrant Transitions: Speculation on Induced Force-Channel Switching}
+\label{sec:quadrant-transitions}
+% -----------------------------------------------------------------------
+
+\begin{quote}
+\emph{What happens if a system is driven from one quadrant to another?}
+\end{quote}
+
+Under natural evolution the phase $\theta(t) = \omega t$ advances continuously, so a
+freely evolving EMTS state sweeps through all four quadrants in one period $T =
+2\pi/\omega$. This is ordinary, unforced dynamics. The interesting question is what it
+would mean to \emph{engineer} a transition—to apply an external perturbation that
+moves the state from its natural quadrant into a different one, changing its dominant
+interaction channel.
+
+% -----------------------------------------------------------------------
+\subsection{Boundary crossings and their cost}
+\label{ssec:boundary-cost}
+% -----------------------------------------------------------------------
+
+Each quadrant boundary is a specific coordinate axis of the $m$--$E$ plane. Crossing it
+requires passing through a qualitatively special intermediate state:
+
+\begin{center}
+\begin{tabular}{clll}
+\hline
+\textbf{Boundary} & \textbf{Condition at crossing} & \textbf{Intermediate state} & \textbf{Energy cost} \\
+\hline
+$\theta = \pi/2$   & $m = 0,\; E > 0$ & Momentarily massless, energetic &
+  $\Delta E \sim m_W c^2 \approx 80\;\text{GeV}$ \\
+$\theta = \pi$     & $m < 0,\; E = 0$ & Anti-mass, zero energy &
+  $\Delta E \sim \Lambda_{\rm QCD} \approx 200\;\text{MeV}$ \\
+$\theta = 3\pi/2$  & $m = 0,\; E < 0$ & Massless, negative energy &
+  $\Delta E \sim E_{\rm P} = \sqrt{\hbar c^5/G_N}$ (Planck scale) \\
+$\theta = 0\,(2\pi)$ & $m > 0,\; E = 0$ & Pure rest mass, zero kinetic energy &
+  $\Delta E \sim 0$ (free, any mass) \\
+\hline
+\end{tabular}
+\end{center}
+
+The $\theta = 3\pi/2$ crossing (entering or leaving \quadGrav) demands a Planck-scale
+energy to sustain a massless, negative-energy intermediate state—which is why the
+gravitational force is not only weak but effectively \emph{non-switchable} at any
+energy accessible today. The $\theta = 0$ boundary, by contrast, is free: a particle at
+rest with positive mass naturally sits there, and the cost of slightly perturbing $\theta$
+away from zero is $O(\omega)$—achievable with any nonzero energy input.
+
+% -----------------------------------------------------------------------
+\subsection{The six transitions: a taxonomy}
+\label{ssec:transition-taxonomy}
+% -----------------------------------------------------------------------
+
+There are six distinct pairs of quadrants: four \emph{adjacent} (sharing a boundary
+axis) and two \emph{diagonal} (no shared boundary). Table~\ref{tab:transitions}
+catalogues them.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{llllc}
+\hline
+\textbf{Transition} & \textbf{Axis crossed} & \textbf{Sign change} & \textbf{Physical interpretation} & \textbf{Known analogue} \\
+\hline
+\quadEM$\to$\quadWeak   & $\theta=\pi/2$     & $m: +\to-$          & Mass becomes anti-mass; parity flip        & $\beta$-decay, weak CC \\
+\quadWeak$\to$\quadStrong & $\theta=\pi$    & $E: +\to-$          & Energy-absorbing becomes energy-emitting   & Hadronisation \\
+\quadStrong$\to$\quadGrav & $\theta=3\pi/2$ & $m: -\to+$          & Confinement released into gravity          & Speculative \\
+\quadGrav$\to$\quadEM     & $\theta=0$      & $E: -\to+$          & Gravitational decay into EM radiation      & Hawking radiation \\
+\hline
+\quadEM$\leftrightarrow$\quadStrong & $\pi/2$ then $\pi$ & $m,E$ both flip  & Full sign inversion; matter$\leftrightarrow$anti-matter+confinement & Annihilation/pair prod.\ \\
+\quadWeak$\leftrightarrow$\quadGrav & $\pi$ then $3\pi/2$& $m,E$ both flip  & Weak-sector anti-mass in gravitational collapse & Speculative \\
+\hline
+\end{tabular}
+\caption{All six quadrant-pair transitions, the boundary axis crossed, the sign that
+flips, and the closest known physical process.}
+\label{tab:transitions}
+\end{table}
+
+% -----------------------------------------------------------------------
+\subsection{Adjacent transitions in known physics}
+\label{ssec:adjacent-known}
+% -----------------------------------------------------------------------
+
+Several standard processes can be re-read as quadrant transitions.
+
+\paragraph{\quadEM$\,\to\,$\quadWeak\ (crossing $\theta=\pi/2$): Beta decay.}
+In neutron beta decay, $n \to p + e^- + \bar\nu_e$, a down quark in the Strong/EM
+regime acquires a $W^-$ vertex. In EMTS terms the quark's phase is pushed across
+$\theta = \pi/2$: $m$ briefly vanishes (massless intermediate state mediated by $W^-$)
+and then re-emerges negative. The proton is a composite that re-establishes a positive-$m$
+projection by redistributing phase among its three quarks, while the electron carries
+the crossed-phase information out as an observable particle. The parity violation
+observed in weak decays is, in this picture, the direct signature of $m$ changing
+sign—the observable projection $\Re(z)$ reverses under the crossing.
+
+\paragraph{\quadGrav$\,\to\,$\quadEM\ (crossing $\theta=0$): Hawking radiation.}
+A black hole's gravitational field corresponds to states deep in \quadGrav\ ($m>0$,
+$E<0$, emitting energy inward). Hawking's calculation shows that quantum fluctuations
+at the event horizon produce photons that escape to infinity. In EMTS this is a
+\emph{boundary crossing at $\theta = 0$}: a virtual pair is produced straddling the
+positive real axis, one partner falls deeper into \quadGrav\ (absorbed by the black
+hole) and the other crosses into \quadEM\ ($E>0$) and propagates away as a real photon.
+The boundary $\theta = 0$ is the cheapest crossing (zero rest-mass cost), which is
+consistent with Hawking radiation being a low-energy, thermal process relative to the
+Planck scale.
+
+\paragraph{\quadWeak$\,\to\,$\quadStrong\ (crossing $\theta=\pi$): Hadronisation.}
+After a high-energy weak collision produces free quarks, the strong force reasserts
+itself and the quarks hadronise—forming bound states. In EMTS the quarks, briefly in
+\quadWeak\ (high-energy, $E>0$, $m<0$), lose energy through gluon radiation and their
+phase rotates through $\theta = \pi$ (the negative real axis, $E \to 0$ then $E < 0$),
+settling into the confining \quadStrong\ regime. The $\Lambda_{\rm QCD}$ energy scale
+of the boundary crossing matches the observed hadronisation energy scale
+$\sim 200\;\text{MeV}$.
+
+% -----------------------------------------------------------------------
+\subsection{Diagonal transitions: simultaneous sign flips}
+\label{ssec:diagonal-transitions}
+% -----------------------------------------------------------------------
+
+Diagonal transitions flip \emph{both} $\text{sgn}(m)$ and $\text{sgn}(E)$
+simultaneously. In the operator language of Chapter~\ref{ch:hermitian-operators}, the
+state passes through the origin $z = 0$—a singularity of undefined phase. There are
+two diagonal pairs:
+
+\paragraph{\quadEM$\,\leftrightarrow\,$\quadStrong.}
+Both components flip: $m \to -m$, $E \to -E$. This is precisely the action of the
+combined parity-times-time-reversal operator $PT$, which in quantum field theory maps a
+particle to its \emph{CPT conjugate}. If \quadEM\ hosts ordinary matter (positive mass,
+positive energy propagating forward in time) then \quadStrong\ contains, in this
+interpretation, a shadow regime that is simultaneously anti-massed and time-reversed.
+The process $e^+ + e^- \to \gamma\gamma$ (pair annihilation) can be read as the electron
+($z \in $ \quadEM) and positron ($z \in $ \quadStrong\ by $PT$ symmetry) annihilating
+at $z = 0$ and re-emerging as photons on the $\theta = \pi/2$ boundary.
+
+\paragraph{\quadWeak$\,\leftrightarrow\,$\quadGrav.}
+The other diagonal pair maps Weak states ($m<0$, $E>0$) to Gravitational states
+($m>0$, $E<0$). This is speculative territory: no known process unambiguously
+transitions between the weak and gravitational regimes. However, in the early universe
+at temperatures above the electroweak scale, weak and gravitational interactions were
+comparably strong. An EMTS perspective would suggest that at those energies the
+\quadWeak--\quadGrav\ boundary becomes traversable—potentially observable as an
+asymmetry between gravitational and weak contributions to the stress-energy tensor
+in primordial cosmology.
+
+% -----------------------------------------------------------------------
+\subsection{Induced transitions: what would it take?}
+\label{ssec:induced-transitions}
+% -----------------------------------------------------------------------
+
+Assuming we could engineer an external field that selectively shifts $\theta$, what
+would "force-channel switching'' require in practice?
+
+The transition operator that maps \quadEM\ into \quadWeak\ is $\sigma_m$, the mass
+parity operator:
+\[
+  \sigma_m = \lvert m\rangle\langle m\rvert - \lvert E\rangle\langle E\rvert
+  = \begin{pmatrix}1&0\\0&-1\end{pmatrix} = \sigma_z.
+\]
+Applied to the canonical EMTS state $\lvert\psi\rangle = \cos\theta\lvert m\rangle +
+i\sin\theta\lvert E\rangle$, this gives
+$\sigma_m\lvert\psi\rangle = \cos\theta\lvert m\rangle - i\sin\theta\lvert E\rangle$,
+which is the state at phase $-\theta$ — a time-reversal in the EMTS picture. The
+analogous energy parity, $\sigma_E = \sigma_x$ in the EMTS basis, reflects across the
+real axis ($E \to -E$), mapping \quadEM\ to \quadGrav\ and \quadWeak\ to \quadStrong.
+Their product
+\[
+  \sigma_m \sigma_E = \begin{pmatrix}0&1\\-1&0\end{pmatrix}
+\]
+performs the diagonal flip and corresponds to rotating by $\pi$ in the Hilbert space.
+
+The practical requirement for each induced transition is therefore a Hamiltonian
+perturbation $\delta\hat{H}$ that is \emph{off-diagonal} in the $\{\lvert m\rangle,
+\lvert E\rangle\}$ basis — precisely the weak-force interaction Hamiltonian in the
+Standard Model. This is not surprising: the purpose of the $W^\pm$ bosons is exactly to
+move states across the mass-sign boundary.
+
+\begin{center}
+\begin{tabular}{lll}
+\hline
+\textbf{Induced transition} & \textbf{Required operator} & \textbf{Analogy} \\
+\hline
+\quadEM$\to$\quadWeak   & $\sigma_m = \sigma_z$       & $W^\pm$ vertex; parity-flip \\
+\quadEM$\to$\quadGrav   & $\sigma_E = \sigma_x$       & Gravitational redshift; photon blue/redshift \\
+\quadEM$\to$\quadStrong & $\sigma_m\sigma_E$           & Annihilation into gluons; QCD vacuum \\
+\hline
+\end{tabular}
+\end{center}
+
+% -----------------------------------------------------------------------
+\subsection{Speculative implications}
+\label{ssec:speculative-implications}
+% -----------------------------------------------------------------------
+
+Taking the quadrant-transition picture seriously leads to several speculative but
+internally consistent hypotheses.
+
+\paragraph{Force transmutation.}
+If a macroscopic object could be driven into \quadStrong\ en masse — its constituent
+particles' phases all shifted past $\theta = \pi$ simultaneously — the dominant
+interaction would switch from electromagnetic to strong. The object would "colour up":
+its atoms would no longer interact electromagnetically but would instead experience the
+short-range, confining strong force. This is obviously prevented by the $\sim 80$ GeV
+per-particle cost of crossing $\theta = \pi/2$ first, but it suggests that at
+sufficiently high temperatures (above the QCD crossover, $T\gtrsim 150\;\text{MeV}$)
+dense nuclear matter does indeed transition collectively into a quark-gluon plasma—a
+state naturally residing in \quadStrong.
+
+\paragraph{Gravitational-to-electromagnetic phase transition.}
+The $\theta = 0$ boundary is the cheapest crossing. A speculative implication is that
+a gravitationally-dominated object (a neutron star or black hole in \quadGrav) could
+undergo a spontaneous phase transition into an electromagnetically-dominated state by
+radiating energy ($E: - \to +$), essentially converting gravitational binding energy
+into photons. Hawking radiation is a quantum-mechanical trace of this process. A fully
+classical version may be relevant to the physics of magnetars, whose intense magnetic
+fields suggest a large electromagnetic component co-existing with extreme gravitational
+binding.
+
+\paragraph{A traversable \quadStrong--\quadGrav\ corridor?}
+The $\theta = 3\pi/2$ boundary normally requires Planck-scale energy. However, if the
+modulus $r$ is very small — near the Planck length $r_P$ — the energy cost of the
+crossing scales as $r/r_P$ and becomes of order unity in natural units. This suggests
+that at the Planck scale, the boundary between the gravitational and strong quadrants
+is no longer a barrier: states can fluctuate freely between \quadStrong\ and \quadGrav.
+This is consistent with the popular conjecture that quantum gravity and the strong force
+unify at the Planck scale, and it provides a geometric EMTS interpretation of that
+unification: the confinement boundary and the gravitational boundary dissolve into each
+other when $r \sim r_P$.
+
+\paragraph{Complete quadrant cycling as a model of particle generation.}
+If a state sweeps through all four quadrants in a single period $T = 2\pi/\omega$, it
+experiences each force in sequence. An object that completes $n$ such cycles before
+being observed will have accumulated a winding number $n$ around the origin. EMTS
+speculates that this winding number corresponds to the \emph{generation number} of
+the particle: first generation (electron, up, down) completes one clean cycle;
+second generation (muon, strange, charm) has a half-integer additional winding from a
+sub-cycle resonance; third generation (tau, bottom, top) winds twice before closing.
+This offers a geometric origin for the three-generation structure of the Standard
+Model — though the quantitative details remain to be worked out.
+
+% -----------------------------------------------------------------------
+\section{Summary}
+\label{sec:forces-summary}
+% -----------------------------------------------------------------------
+
+The fundamental forces are distributed across the EMTS complex plane as follows:
+\begin{enumerate}
+  \item \textbf{\quadEM\ (Electromagnetic):} $m>0$, $E>0$. Long-range, massless
+        photon mediator on the \quadEM--\quadWeak\ boundary. $U(1)$ phase symmetry.
+        Coupling $\propto \cos^2\theta/r$.
+
+  \item \textbf{\quadWeak\ (Weak):} $m<0$, $E>0$. Short-range, massive $W^\pm/Z^0$
+        mediators. Parity-violating because its mediators must cross the imaginary axis.
+        Coupling with Yukawa suppression $e^{-m_W r}$.
+
+  \item \textbf{\quadStrong\ (Strong):} $m<0$, $E<0$. Confining, with three colour
+        phases at $2\pi/3$ intervals. Asymptotic freedom at small $r$; linear confinement
+        at large $r$. $SU(3)$ colour neutrality = closed orbit on the negative real axis.
+
+  \item \textbf{\quadGrav\ (Gravitational):} $m>0$, $E<0$. Long-range, purely
+        attractive, massless graviton on the \quadGrav--\quadEM\ boundary. Always
+        attractive because there is no positive-$E$ branch in $\Delta_{\rm Grav}$.
+        Coupling suppressed by $(r_{\rm P}/r)^2$.
+\end{enumerate}
+
+The quadrant boundaries (the coordinate axes) act as force-transition interfaces,
+hosting the massless mediators and governing the conservation laws that apply when a
+state changes its dominant interaction channel. Chapter~\ref{ch:standard-model} builds
+on this picture by placing Standard Model particles—quarks, leptons, and gauge
+bosons—explicitly on the complex plane and connecting their properties to the phase
+structure developed here.

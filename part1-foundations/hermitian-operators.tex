@@ -1,11 +1,372 @@
 \chapter{Hermitian Operators on a Hilbert Space}
 \label{ch:hermitian-operators}
-Let $H=\mathbb{C}^2$ with basis $\{\lvert m\rangle,\lvert E\rangle\}$. A normalized state is
+
+The EMTS framework posits that physical states are complex numbers $z = m + iE$, rotating in
+the complex plane as time advances. This geometric picture demands a rigorous operator-theoretic
+scaffolding: \emph{which} quantities are observable, \emph{how} are they extracted from a complex
+state, and \emph{why} do measurements always return real values? The answer lies in the theory of
+Hermitian operators acting on a Hilbert space. This chapter builds that theory from first
+principles, continuously anchoring each definition to the EMTS picture.
+
+% -----------------------------------------------------------------------
+\section{The EMTS Hilbert Space}
+\label{sec:emts-hilbert}
+% -----------------------------------------------------------------------
+
+The appropriate arena for EMTS quantum states is the two-dimensional complex Hilbert space
 \[
-\lvert \psi \rangle = \cos\theta\,\lvert m \rangle + i\sin\theta\,\lvert E \rangle,\qquad \langle \psi \vert \psi \rangle=1.
+  \mathcal{H} = \mathbb{C}^2,
 \]
-Observables $A$ are Hermitian with spectral decomposition $A=\sum_k a_k P_k$. Measurement of $a_k$ occurs with probability $\langle \psi \vert P_k \vert \psi \rangle$ and the post-measurement state is $P_k\lvert\psi\rangle/\sqrt{\langle \psi \vert P_k \vert \psi \rangle}$.
+equipped with the standard inner product
+\[
+  \langle \phi \vert \psi \rangle = \phi_1^*\psi_1 + \phi_2^*\psi_2,
+  \qquad \phi, \psi \in \mathcal{H}.
+\]
+We choose an \textbf{EMTS basis} that reflects the physical partition of mass and energy:
+\[
+  \lvert m \rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix},
+  \qquad
+  \lvert E \rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix}.
+\]
+These basis vectors are orthonormal,
+$\langle m \vert m \rangle = \langle E \vert E \rangle = 1$ and
+$\langle m \vert E \rangle = 0$, and they span $\mathcal{H}$ completely: any state can be
+written as a superposition
+\[
+  \lvert \psi \rangle = \alpha\,\lvert m \rangle + \beta\,\lvert E \rangle,
+  \qquad \alpha, \beta \in \mathbb{C}.
+\]
 
-For a “mass” measurement, $P_m=\lvert m\rangle\langle m\rvert$, so $\mathbb{P}(m)=\cos^2\theta$, echoing the geometric projection $\Re(z)=r\cos\theta$.
+\subsection{Normalized EMTS states}
 
-Unitary evolution with $H=\tfrac{\hbar\omega}{2}\sigma_y$ yields $\mathbb{P}(m,t)=\cos^2(\omega t)$, bridging to $\theta=\omega t$.\cite{griffiths_qm}
+Physical states carry unit norm. Demanding $\langle \psi \vert \psi \rangle = 1$ constrains
+$|\alpha|^2 + |\beta|^2 = 1$, which is solved by
+\[
+  \lvert \psi \rangle = \cos\theta\,\lvert m \rangle + i\sin\theta\,\lvert E \rangle,
+  \qquad \theta \in [0, 2\pi).
+\]
+The single real parameter $\theta$ encodes the entire state:
+\begin{itemize}
+  \item $\theta = 0$: pure mass state $\lvert m \rangle$—fully real, directly observable.
+  \item $\theta = \pi/2$: pure energy state $i\lvert E \rangle$—fully imaginary, hidden from
+        direct observation.
+  \item $0 < \theta < \pi/2$: superposition carrying both mass and energy character.
+\end{itemize}
+This parametrisation directly mirrors the EMTS complex representation $\EMTSz$, where
+$\cos\theta$ and $\sin\theta$ govern the mass-energy partition at any instant.
+
+% -----------------------------------------------------------------------
+\section{Linear Operators on $\mathcal{H}$}
+\label{sec:linear-operators}
+% -----------------------------------------------------------------------
+
+A \textbf{linear operator} $A : \mathcal{H} \to \mathcal{H}$ is a $2\times 2$ complex matrix
+acting on kets:
+\[
+  A\lvert \psi \rangle
+  = \begin{pmatrix}A_{11}&A_{12}\\A_{21}&A_{22}\end{pmatrix}
+    \begin{pmatrix}\alpha\\\beta\end{pmatrix}.
+\]
+The \textbf{adjoint} (Hermitian conjugate) $A^\dagger$ is defined by the inner-product
+relation
+\[
+  \langle \phi \vert A \psi \rangle = \langle A^\dagger \phi \vert \psi \rangle
+  \quad \forall\,\phi, \psi \in \mathcal{H},
+\]
+which for $2\times 2$ matrices reduces to $A^\dagger = (A^*)^T$: transpose, then
+complex-conjugate each entry.
+
+\subsection{Key operator classes}
+
+\begin{center}
+\begin{tabular}{lll}
+\hline
+\textbf{Class} & \textbf{Condition} & \textbf{Role in EMTS} \\
+\hline
+Hermitian   & $A^\dagger = A$                 & Observables (real eigenvalues) \\
+Unitary     & $U^\dagger U = \mathbf{1}$      & Time evolution (norm-preserving) \\
+Projection  & $P^2 = P$,\; $P^\dagger = P$   & Measurement outcomes \\
+\hline
+\end{tabular}
+\end{center}
+
+All three classes appear naturally in EMTS: observables are Hermitian, time evolution is
+unitary, and each measurement outcome is selected by a projection operator.
+
+% -----------------------------------------------------------------------
+\section{Hermitian Operators and Observables}
+\label{sec:hermitian-observables}
+% -----------------------------------------------------------------------
+
+An operator $A$ is \textbf{Hermitian} if $A^\dagger = A$. Two fundamental consequences
+follow immediately.
+
+\begin{enumerate}
+  \item \textbf{Real eigenvalues.} If $A\lvert a \rangle = a\lvert a \rangle$, then
+        $a \in \mathbb{R}$. \\
+        \emph{Proof:} $a\langle a \vert a \rangle
+        = \langle a \vert A \vert a \rangle
+        = \langle A^\dagger a \vert a \rangle
+        = a^*\langle a \vert a \rangle$, hence $a = a^*$.
+
+  \item \textbf{Orthogonal eigenstates.} Eigenstates with distinct eigenvalues are
+        orthogonal: $\langle a_1 \vert a_2 \rangle = 0$ whenever $a_1 \neq a_2$.
+\end{enumerate}
+
+These properties are exactly what EMTS requires: observable quantities (mass, energy) must
+be real numbers, and distinct physical configurations must be distinguishable.
+
+\subsection{Spectral decomposition}
+
+For a Hermitian operator $A$ with eigenvalues $\{a_k\}$ and rank-1 projectors
+$P_k = \lvert a_k \rangle\langle a_k \rvert$, the \textbf{spectral theorem} guarantees
+\[
+  A = \sum_k a_k P_k,
+  \qquad
+  \sum_k P_k = \mathbf{1},
+  \qquad
+  P_j P_k = \delta_{jk} P_k.
+\]
+This decomposition bridges abstract operator algebra to physical measurement: each term
+$a_k P_k$ pairs a possible measurement outcome $a_k$ with the projector that selects it
+from any state. Given a state $\lvert\psi\rangle$, the Born rule states that outcome
+$a_k$ is obtained with probability
+\[
+  \mathbb{P}(a_k) = \langle \psi \vert P_k \vert \psi \rangle,
+\]
+and the post-measurement state is
+\[
+  \frac{P_k\lvert\psi\rangle}{\sqrt{\,\mathbb{P}(a_k)\,}}.
+\]
+
+% -----------------------------------------------------------------------
+\section{The Mass Operator}
+\label{sec:mass-operator}
+% -----------------------------------------------------------------------
+
+The observable corresponding to the \emph{mass component} of an EMTS state is
+\[
+  \hat{M} = \lvert m \rangle\langle m \rvert
+  = \begin{pmatrix}1&0\\0&0\end{pmatrix}.
+\]
+This is the Hermitian projector onto the mass basis vector. Its spectral decomposition
+has eigenvalues $\{1, 0\}$:
+\begin{align}
+  \hat{M}\lvert m \rangle &= 1\cdot\lvert m \rangle, \\
+  \hat{M}\lvert E \rangle &= 0\cdot\lvert E \rangle.
+\end{align}
+
+\subsection{Measurement probability}
+
+For the EMTS state $\lvert\psi\rangle = \cos\theta\,\lvert m\rangle + i\sin\theta\,\lvert E\rangle$,
+the Born rule gives
+\[
+  \mathbb{P}(m)
+  = \langle \psi \vert \hat{M} \vert \psi \rangle
+  = \langle \psi \vert m \rangle\langle m \vert \psi \rangle
+  = |\cos\theta|^2
+  = \cos^2\theta.
+\]
+This is the quantum-mechanical expression of the EMTS \textbf{projection principle}
+(Section~\ref{sec:projection-principle}): the probability of observing mass equals the
+square of the real projection $\cos\theta$, precisely as the geometric observable
+$\Re(z) = \projReal$ suggested.
+
+\subsection{Post-measurement state}
+
+Upon obtaining outcome $m = 1$, the state collapses to
+\[
+  \frac{\hat{M}\lvert\psi\rangle}{\sqrt{\mathbb{P}(m)}}
+  = \frac{\cos\theta\,\lvert m\rangle}{|\cos\theta|}
+  = \lvert m\rangle.
+\]
+The imaginary energy component vanishes from the observable record—the system has been
+``projected to the real axis,'' in perfect correspondence with the EMTS measurement
+picture.
+
+% -----------------------------------------------------------------------
+\section{The Energy Operator}
+\label{sec:energy-operator}
+% -----------------------------------------------------------------------
+
+Symmetrically, the \emph{energy component} is described by
+\[
+  \hat{E}_{\rm obs}
+  = \lvert E \rangle\langle E \rvert
+  = \begin{pmatrix}0&0\\0&1\end{pmatrix},
+\]
+with measurement probability
+\[
+  \mathbb{P}(E)
+  = \langle \psi \vert \hat{E}_{\rm obs} \vert \psi \rangle
+  = \sin^2\theta.
+\]
+Note that
+\[
+  \mathbb{P}(m) + \mathbb{P}(E)
+  = \cos^2\theta + \sin^2\theta = 1,
+\]
+confirming that $\{\hat{M},\hat{E}_{\rm obs}\}$ form a \emph{complete}, exhaustive pair
+of projectors: the system must register in one or the other when measured. The EMTS
+parameter $\theta$ therefore encodes the \emph{relative probability} of finding the
+system in its mass-like versus energy-like configuration.
+
+% -----------------------------------------------------------------------
+\section{The EMTS Hamiltonian and Time Evolution}
+\label{sec:emts-hamiltonian}
+% -----------------------------------------------------------------------
+
+In EMTS, the phase advances linearly as $\phaseTime$. This continuous rotation in the
+$\{\lvert m\rangle, \lvert E\rangle\}$ plane is generated by a Hermitian Hamiltonian.
+The natural generator of the infinitesimal transformation
+\[
+  \cos\theta \;\to\; \cos(\theta + d\theta),
+  \qquad
+  \sin\theta \;\to\; \sin(\theta + d\theta)
+\]
+in $\mathcal{H}$ is
+\[
+  \hat{H} = \frac{\hbar\omega}{2}\,\sigma_y
+  = \frac{\hbar\omega}{2}\begin{pmatrix}0 & -i \\ i & 0\end{pmatrix},
+\]
+where $\sigma_y$ is the Pauli $y$-matrix. This operator is Hermitian
+($\sigma_y^\dagger = \sigma_y$) with eigenvalues $\pm\hbar\omega/2$.
+
+\subsection{Schrödinger equation in EMTS}
+
+Unitary time evolution is given by
+\[
+  \lvert \psi(t) \rangle = U(t)\lvert \psi(0) \rangle,
+  \qquad
+  U(t) = e^{-i\hat{H}t/\hbar} = e^{-i\omega t\,\sigma_y/2}.
+\]
+Evaluating the matrix exponential via $\sin$ and $\cos$:
+\[
+  U(t) = \begin{pmatrix}
+    \cos\!\tfrac{\omega t}{2} & -\sin\!\tfrac{\omega t}{2} \\[4pt]
+    \sin\!\tfrac{\omega t}{2} &  \cos\!\tfrac{\omega t}{2}
+  \end{pmatrix}.
+\]
+Starting from the mass eigenstate $\lvert\psi(0)\rangle = \lvert m\rangle$:
+\[
+  \lvert \psi(t) \rangle
+  = \cos\!\left(\frac{\omega t}{2}\right)\lvert m \rangle
+  + \sin\!\left(\frac{\omega t}{2}\right)\lvert E \rangle.
+\]
+With $\theta \equiv \omega t/2$ this recovers the canonical EMTS state, and the mass
+measurement probability oscillates as\cite{griffiths_qm}
+\[
+  \mathbb{P}(m,t) = \cos^2\!\left(\frac{\omega t}{2}\right),
+\]
+which is the quantum manifestation of the projection $m(t) = r\cos(\omega t)$ in the
+classical EMTS picture.
+
+\subsection{Energy eigenvalues and EMTS phase quadrants}
+
+The eigenvalues $\pm\hbar\omega/2$ of $\hat{H}$ correspond to the two stationary states.
+In the EMTS geometric picture these map to $\theta = 0$ (mass-dominated, \quadEM\
+regime) and $\theta = \pi$ (anti-mass, \quadStrong\ regime). Time evolution continuously
+sweeps through all four force quadrants, as summarised in
+Table~\ref{tab:phase-quadrants-hermitian}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccccc}
+\hline
+\textbf{Phase window} & \textbf{Quadrant} & $\mathbb{P}(m)$ & \textbf{Character} & \textbf{Force} \\
+\hline
+$\theta = 0$                   & real$^+$ axis  & $= 1$   & Pure mass (rest)      & — (graviton/photon pole) \\
+$\theta \in (0,\,\pi/2)$       & \quadEM        & $> 1/2$ & Mass-dominated        & Electromagnetic \\
+$\theta = \pi/2$               & imag$^+$ axis  & $= 0$   & Pure energy           & photon pole \\
+$\theta \in (\pi/2,\,\pi)$     & \quadWeak      & $< 1/2$ & Energy-dominated      & Weak nuclear \\
+$\theta = \pi$                 & real$^-$ axis  & $= 1$   & Anti-mass             & $CP$ boundary \\
+$\theta \in (\pi,\,3\pi/2)$    & \quadStrong    & $< 1/2$ & Both components $< 0$ & Strong nuclear \\
+$\theta = 3\pi/2$              & imag$^-$ axis  & $= 0$   & Negative energy       & vacuum/Casimir \\
+$\theta \in (3\pi/2,\,2\pi)$   & \quadGrav      & $> 1/2$ & Mass$^+$, energy$^-$  & Gravitational \\
+\hline
+\end{tabular}
+\caption{Mass measurement probability $\mathbb{P}(m)=\cos^2\theta$ across all EMTS phase
+regions. Boundary axes ($\theta = 0, \pi/2, \pi, 3\pi/2$) are force-transition interfaces
+that host the massless mediators; see Chapter~\ref{ch:fundamental-forces}.}
+\label{tab:phase-quadrants-hermitian}
+\end{table}
+
+% -----------------------------------------------------------------------
+\section{Commutator Structure and the Uncertainty Principle}
+\label{sec:commutators}
+% -----------------------------------------------------------------------
+
+Two observables $A$ and $B$ are \textbf{compatible} (simultaneously measurable) if and
+only if $[A, B] = AB - BA = 0$. For the EMTS projectors:
+\[
+  [\hat{M},\hat{E}_{\rm obs}]
+  = \lvert m\rangle\langle m\vert E\rangle\langle E\rvert
+  - \lvert E\rangle\langle E\vert m\rangle\langle m\rvert
+  = 0,
+\]
+since $\langle m\vert E\rangle = 0$. The mass and energy projectors \emph{commute}: they
+share the common eigenbasis $\{\lvert m\rangle, \lvert E\rangle\}$ and are simultaneously
+diagonalizable. Measuring one does not disturb the other.
+
+However, the mass operator $\hat{M}$ and the Hamiltonian $\hat{H}$ do \emph{not} commute:
+\[
+  [\hat{M}, \hat{H}]
+  = \frac{\hbar\omega}{2}\bigl(\hat{M}\sigma_y - \sigma_y\hat{M}\bigr)
+  = \frac{i\hbar\omega}{2}\begin{pmatrix}0 & 1 \\ -1 & 0\end{pmatrix} \neq 0.
+\]
+This non-commutativity encodes the core EMTS dynamical principle:
+\emph{a state with definite mass has indefinite energy, and vice versa.}
+The Robertson uncertainty relation
+\[
+  \Delta M \cdot \Delta H
+  \;\geq\; \frac{1}{2}\bigl|\langle[\hat{M},\hat{H}]\rangle\bigr|
+\]
+quantifies this trade-off, directly paralleling the classical EMTS circle identity
+$(m/r)^2 + (E/r)^2 = 1$: fixing one component forces uncertainty in the other.
+
+% -----------------------------------------------------------------------
+\section{Expectation Values and the EMTS Observable}
+\label{sec:expectation-values}
+% -----------------------------------------------------------------------
+
+The \textbf{expectation value} of an observable $A$ in state $\lvert\psi\rangle$ is
+\[
+  \langle A \rangle_\psi = \langle \psi \vert A \vert \psi \rangle \in \mathbb{R}.
+\]
+Hermiticity guarantees this is real. For the canonical EMTS state:
+\begin{align}
+  \langle \hat{M} \rangle             &= \cos^2\theta, \\
+  \langle \hat{E}_{\rm obs} \rangle   &= \sin^2\theta, \\
+  \langle \hat{H} \rangle             &= -\frac{\hbar\omega}{2}\cos(2\theta).
+\end{align}
+
+The expectation value $\langle \hat{M} \rangle = \cos^2\theta$ is the quantum-mechanical
+analogue of the EMTS projection $\Re(z)/r = \cos\theta$, lifted from a purely geometric
+ratio to a measurable probability. The full modulus $r$ supplements this picture by
+setting the energy-mass scale: the observable ``real'' value is
+$r\langle\hat{M}\rangle^{1/2} = r|\cos\theta|$.
+
+% -----------------------------------------------------------------------
+\section{Summary}
+\label{sec:hermitian-summary}
+% -----------------------------------------------------------------------
+
+This chapter has established the following:
+\begin{enumerate}
+  \item The EMTS state space is the Hilbert space $\mathcal{H}=\mathbb{C}^2$ with
+        mass-energy basis $\{\lvert m\rangle, \lvert E\rangle\}$.
+  \item Hermitian operators are the \emph{correct} mathematical objects for EMTS
+        observables: their real eigenvalues guarantee real measurement outcomes, and their
+        orthogonal eigenstates mirror the EMTS mass-energy split.
+  \item The mass operator $\hat{M}$ makes the EMTS projection principle precise:
+        $\mathbb{P}(m)=\cos^2\theta$ is the probability of finding the system on the real
+        axis at phase $\theta$.
+  \item The Hamiltonian $\hat{H}=\tfrac{\hbar\omega}{2}\sigma_y$ drives the rotation
+        $\phaseTime$, generating all EMTS dynamics from a single Hermitian generator.
+  \item Non-commutativity $[\hat{M},\hat{H}]\neq 0$ enforces the mass-energy uncertainty
+        that is geometrically encoded in the circular identity $m^2 + E^2 = r^2$.
+\end{enumerate}
+
+With these operator-theoretic foundations in place, the next chapter examines how EMTS
+states couple to the fundamental forces and how the standard-model interactions emerge
+from the phase structure of the complex plane.
